@@ -1,30 +1,30 @@
 /**
- * @description: 
+ * @description:
  * @param {Number} status
  * @return void
  */
 export const checkStatus = (status: number): void => {
 	switch (status) {
 		case 400:
-			break;
+			break
 		case 401:
-			break;
+			break
 		case 403:
-			break;
+			break
 		case 404:
-			break;
+			break
 		case 405:
-			break;
+			break
 		case 408:
-			break;
+			break
 		case 500:
-			break;
+			break
 		case 502:
-			break;
+			break
 		case 503:
-			break;
+			break
 		case 504:
-			break;
+			break
 		default:
 	}
-};
+}

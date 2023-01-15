@@ -1,57 +1,57 @@
-import axios, { AxiosRequestConfig, Canceler } from "axios";
-import { isFunction } from "@/utils/is/index";
-import qs from "qs";
+import axios, { AxiosRequestConfig, Canceler } from 'axios'
+import { isFunction } from '@/utils/is/index'
+import qs from 'qs'
 
-let pendingMap = new Map<string, Canceler>();
+let pendingMap = new Map<string, Canceler>()
 
 export const getPendingUrl = (config: AxiosRequestConfig) =>
-	[config.method, config.url, qs.stringify(config.data), qs.stringify(config.params)].join("&");
+	[config.method, config.url, qs.stringify(config.data), qs.stringify(config.params)].join('&')
 
 export class AxiosCanceler {
 	/**
-	 * @description: 
+	 * @description:
 	 * @param {Object} config
 	 */
 	addPending(config: AxiosRequestConfig) {
-		this.removePending(config);
-		const url = getPendingUrl(config);
+		this.removePending(config)
+		const url = getPendingUrl(config)
 		config.cancelToken =
 			config.cancelToken ||
 			new axios.CancelToken(cancel => {
 				if (!pendingMap.has(url)) {
-					pendingMap.set(url, cancel);
+					pendingMap.set(url, cancel)
 				}
-			});
+			})
 	}
 
 	/**
-	 * @description: 
+	 * @description:
 	 * @param {Object} config
 	 */
 	removePending(config: AxiosRequestConfig) {
-		const url = getPendingUrl(config);
+		const url = getPendingUrl(config)
 
 		if (pendingMap.has(url)) {
-			const cancel = pendingMap.get(url);
-			cancel && cancel();
-			pendingMap.delete(url);
+			const cancel = pendingMap.get(url)
+			cancel && cancel()
+			pendingMap.delete(url)
 		}
 	}
 
 	/**
-	 * @description: 
+	 * @description:
 	 */
 	removeAllPending() {
 		pendingMap.forEach(cancel => {
-			cancel && isFunction(cancel) && cancel();
-		});
-		pendingMap.clear();
+			cancel && isFunction(cancel) && cancel()
+		})
+		pendingMap.clear()
 	}
 
 	/**
-	 * @description: 
+	 * @description:
 	 */
 	reset(): void {
-		pendingMap = new Map<string, Canceler>();
+		pendingMap = new Map<string, Canceler>()
 	}
 }

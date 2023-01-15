@@ -1,11 +1,11 @@
 // * global
 declare global {
 	interface Window {
-		__REDUX_DEVTOOLS_EXTENSION_COMPOSE__: any;
+		__REDUX_DEVTOOLS_EXTENSION_COMPOSE__: any
 	}
 	interface Navigator {
-		msSaveOrOpenBlob: (blob: Blob, fileName: string) => void;
-		browserLanguage: string;
+		msSaveOrOpenBlob: (blob: Blob, fileName: string) => void
+		browserLanguage: string
 	}
 }
-export {};
+export {}

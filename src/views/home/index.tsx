@@ -1,12 +1,7 @@
-import "./index.less";
+import './index.less'
 
 const Home = () => {
-	return (
-		<div className="container">
-			Home 화면
+	return <div className='container'>Home 화면</div>
+}
 
-		</div>
-	);
-};
-
-export default Home;
+export default Home

@@ -1,20 +1,16 @@
-import React, { Suspense } from "react";
+import React, { Suspense } from 'react'
 
 /**
- * @description 
- * @param {Element} Component 
+ * @description
+ * @param {Element} Component
  * @returns element
  */
 const lazyLoad = (Component: React.LazyExoticComponent<any>): React.ReactNode => {
 	return (
-		<Suspense
-			fallback={
-				<div>spin load</div>
-			}
-		>
+		<Suspense fallback={<div>spin load</div>}>
 			<Component />
 		</Suspense>
-	);
-};
+	)
+}
 
-export default lazyLoad;
+export default lazyLoad

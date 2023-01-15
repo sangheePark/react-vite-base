@@ -1,12 +1,12 @@
-import NProgress from "nprogress";
-import "nprogress/nprogress.css";
+import NProgress from 'nprogress'
+import 'nprogress/nprogress.css'
 
 NProgress.configure({
-	easing: "ease", 
+	easing: 'ease',
 	speed: 500,
-	showSpinner: true, 
-	trickleSpeed: 200, 
-	minimum: 0.3 
-});
+	showSpinner: true,
+	trickleSpeed: 200,
+	minimum: 0.3
+})
 
-export default NProgress;
+export default NProgress

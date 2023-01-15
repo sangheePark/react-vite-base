@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+		"lint:eslint": "eslint --fix --ext .js,.ts,.tsx ./src",
+		"lint:prettier": "prettier --write --loglevel warn \"src/**/*.{js,ts,json,tsx,css,less,scss,html,md}\""
   },
   "dependencies": {
     "axios": "^1.2.2",
