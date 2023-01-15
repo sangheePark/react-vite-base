@@ -1,6 +1,6 @@
 import NProgress from '@/config/nprogress'
 import axios, { AxiosInstance, AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios'
-import { showFullScreenLoading, tryHideFullScreenLoading } from '@/config/serviceLoading'
+import { tryHideFullScreenLoading } from '@/config/serviceLoading'
 import { ResultData } from '@/api/interface'
 import { ResultEnum } from '@/enums/httpEnum'
 import { checkStatus } from './helper/checkStatus'
@@ -19,7 +19,7 @@ const config = {
 const onRequest = (requestConfig: AxiosRequestConfig): AxiosRequestConfig => {
 	NProgress.start()
 	axiosCanceler.addPending(requestConfig)
-	// config.headers!.noLoading || showFullScreenLoading();
+	// config?.headers?.noLoading || showFullScreenLoading()
 	const token: string = ''
 	return { ...requestConfig, headers: { 'x-access-token': token } }
 }
