@@ -1,9 +1,9 @@
 import React from 'react'
 import lazyLoad from '@/routers/utils/lazyLoad'
 import { LayoutIndex } from '@/routers/constant'
-import { RouteObject } from '@/routers/interface'
+import { IRouteObject } from '@/routers/interface'
 
-const homeRouter: Array<RouteObject> = [
+const homeRouter: Array<IRouteObject> = [
 	{
 		element: <LayoutIndex />,
 		children: [

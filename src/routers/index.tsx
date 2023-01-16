@@ -1,10 +1,10 @@
-import { Navigate, useRoutes } from 'react-router-dom'
-import { RouteObject } from '@/routers/interface'
+import { Navigate, RouteObject, useRoutes } from 'react-router-dom'
 import Login from '@/views/login/index'
+import { IRouteObject } from './interface'
 
-const metaRouters = import.meta.glob<RouteObject[]>('./modules/*.tsx', { eager: true, import: 'default' })
+const metaRouters = import.meta.glob<IRouteObject[]>('./modules/*.tsx', { eager: true, import: 'default' })
 
-export const routerArray: RouteObject[] = []
+export const routerArray: IRouteObject[] = []
 Object.keys(metaRouters).forEach(key => {
 	console.log(`routers is key:`, key)
 
@@ -13,13 +13,13 @@ Object.keys(metaRouters).forEach(key => {
 	// 	routerArray.push(...modules)
 	// })
 	const modules = metaRouters[key]
-	modules.forEach((router: RouteObject) => {
-		const list: RouteObject[] = [router, ...(router?.children || [])].filter(f => f.path)
+	modules.forEach((router: IRouteObject) => {
+		const list: IRouteObject[] = [router, ...(router?.children || [])].filter(f => f.path)
 		routerArray.push(...list)
 	})
 })
 
-export const rootRouter: RouteObject[] = [
+export const rootRouter: IRouteObject[] = [
 	{
 		path: '/',
 		element: <Navigate to='/login' />
@@ -41,7 +41,7 @@ export const rootRouter: RouteObject[] = [
 ]
 
 const Router = () => {
-	const routes = useRoutes(rootRouter)
+	const routes = useRoutes(rootRouter as RouteObject[])
 	return routes
 }
 

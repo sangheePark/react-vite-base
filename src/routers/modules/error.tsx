@@ -1,8 +1,8 @@
 import React from 'react'
 import lazyLoad from '@/routers/utils/lazyLoad'
-import { RouteObject } from '@/routers/interface'
+import { IRouteObject } from '@/routers/interface'
 
-const errorRouter: Array<RouteObject> = [
+const errorRouter: Array<IRouteObject> = [
 	{
 		path: '/403',
 		element: lazyLoad(React.lazy(() => import('@/views/error/403'))),

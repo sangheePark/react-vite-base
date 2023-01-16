@@ -1,3 +1,5 @@
+import { RouteObject } from 'react-router-dom'
+
 export interface MetaProps {
 	keepAlive?: boolean
 	requiresAuth?: boolean
@@ -5,12 +7,8 @@ export interface MetaProps {
 	key?: string
 }
 
-export interface RouteObject {
-	caseSensitive?: boolean
-	children?: RouteObject[]
-	element?: React.ReactNode
-	index?: boolean
-	path?: string
+export declare type IRouteObject = Omit<RouteObject, 'children'> & {
+	children?: IRouteObject[]
 	meta?: MetaProps
 	isLink?: string
 }
