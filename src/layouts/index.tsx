@@ -2,9 +2,7 @@ import { useEffect } from 'react'
 import { Outlet } from 'react-router-dom'
 import './index.less'
 
-interface IProps {}
-
-const Layout = (props: any) => {
+const Layout = () => {
 	useEffect(() => {}, [])
 
 	return (

@@ -1,8 +1,19 @@
 {
 	"recommendations": [
-		"stylelint.vscode-stylelint",
+		// "stylelint.vscode-stylelint",
+		// Eslint
 		"dbaeumer.vscode-eslint",
-		"editorconfig.editorconfig",
-		"esbenp.prettier-vscode"
+		// Prettier
+		"esbenp.prettier-vscode",
+		// T Tree
+		"gruntfuggly.todo-tree",
+		// 단어 체크
+		"streetsidesoftware.code-spell-checker",
+		// react 편의 스넵샷
+		"magssch.react-typescript-boilerplate",
+		// explorer theme
+		"pkief.material-icon-theme",
+		// git 렌즈
+		"eamodio.gitlens"
 	]
 }

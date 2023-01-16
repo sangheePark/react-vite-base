@@ -8,7 +8,7 @@ const homeRouter: Array<RouteObject> = [
 		element: <LayoutIndex />,
 		children: [
 			{
-				path: '/home/index',
+				path: '/home',
 				element: lazyLoad(React.lazy(() => import('@/views/home/index'))),
 				meta: {
 					requiresAuth: true,

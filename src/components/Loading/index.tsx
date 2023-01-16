@@ -1,7 +1,7 @@
 import './index.less'
 
 const Loading = ({ tip = 'Loading' }: { tip?: string }) => {
-	return <div>loading..</div>
+	return <div>{tip}</div>
 }
 
 export default Loading

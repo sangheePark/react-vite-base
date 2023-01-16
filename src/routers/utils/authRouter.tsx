@@ -2,6 +2,7 @@ import { useLocation, Navigate } from 'react-router-dom'
 // import { AxiosCanceler } from "@/api/helper/axiosCancel";
 import { searchRoute } from '@/utils/util'
 import { rootRouter } from '@/routers/index'
+import { useAppStore } from '@/store'
 // import { HOME_URL } from "@/config/config";
 
 // const axiosCanceler = new AxiosCanceler();
@@ -11,6 +12,7 @@ import { rootRouter } from '@/routers/index'
  * */
 const AuthRouter = (props: { children: JSX.Element }) => {
 	const { pathname } = useLocation()
+	const { token } = useAppStore()
 	const route = searchRoute(pathname, rootRouter)
 	// axiosCanceler.removeAllPending();
 
@@ -18,11 +20,11 @@ const AuthRouter = (props: { children: JSX.Element }) => {
 	if (!route.meta?.requiresAuth) return props.children
 
 	// * 토큰이 있는지 확인
-	const token = '' //store.getState().global.token;
+	console.log('token is ', token)
 	if (!token) return <Navigate to='/login' replace />
 
 	// * Dynamic Router(동적 라우팅, 백엔드에서 반환된 메뉴 데이터에 따라 생성된 1차원 배열)
-	const dynamicRouter = [] as any[] //store.getState().auth.authRouter;
+	const dynamicRouter = rootRouter.map(m => m.path) //store.getState().auth.authRouter;
 	// * Static Router(정적 라우팅, 홈페이지 주소를 구성해야 합니다. 그렇지 않으면 메뉴, 버튼 권한 등과 같은 데이터를 얻기 위해 홈페이지에 들어갈 수 없습니다), 데이터를 얻을 때 로드되며 모든 구성 홈페이지 주소는 양호합니다.
 	const staticRouter = ['/', '/403']
 	const routerList = dynamicRouter.concat(staticRouter)
