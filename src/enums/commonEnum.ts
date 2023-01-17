@@ -1,3 +1,6 @@
+/**
+ * @description: 화면 URL
+ */
 export enum EPath {
 	HOME = '/home',
 	LOGIN = '/login',

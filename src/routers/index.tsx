@@ -1,7 +1,7 @@
 import { Navigate, RouteObject, useRoutes } from 'react-router-dom'
-import Login from '@/views/login/index'
+import Login from '@/views/login/Login'
 import { IRouteObject } from './interface'
-import { EPath } from '@/enums/common'
+import { EPath } from '@/enums/commonEnum'
 
 const metaRouters = import.meta.glob<IRouteObject[]>('./modules/*.tsx', { eager: true, import: 'default' })
 

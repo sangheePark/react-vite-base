@@ -2,7 +2,7 @@ import React from 'react'
 import lazyLoad from '@/routers/utils/lazyLoad'
 import { LayoutIndex } from '@/routers/constant'
 import { IRouteObject } from '@/routers/interface'
-import { EPath } from '@/enums/common'
+import { EPath } from '@/enums/commonEnum'
 
 const homeRouter: Array<IRouteObject> = [
 	{
@@ -10,7 +10,7 @@ const homeRouter: Array<IRouteObject> = [
 		children: [
 			{
 				path: EPath.HOME,
-				element: lazyLoad(React.lazy(() => import('@/views/home'))),
+				element: lazyLoad(React.lazy(() => import('@/views/home/Home'))),
 				meta: {
 					requiresAuth: true,
 					title: '홈',

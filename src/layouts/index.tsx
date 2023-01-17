@@ -1,12 +1,12 @@
 import { useEffect } from 'react'
 import { Outlet } from 'react-router-dom'
-import './index.less'
+import style from './index.module.less'
 
 const Layout = () => {
 	useEffect(() => {}, [])
 
 	return (
-		<section className='container'>
+		<section className={style.container}>
 			<Outlet></Outlet>
 		</section>
 	)

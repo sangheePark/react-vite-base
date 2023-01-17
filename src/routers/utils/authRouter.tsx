@@ -2,7 +2,7 @@ import { useLocation, Navigate } from 'react-router-dom'
 // import { AxiosCanceler } from "@/api/helper/axiosCancel";
 import { searchRoute } from '@/utils/util'
 import { rootRouter } from '@/routers/index'
-import { useAppStore } from '@/store'
+import useAppStore from '@/store/appStore'
 // import { HOME_URL } from "@/config/config";
 
 // const axiosCanceler = new AxiosCanceler();

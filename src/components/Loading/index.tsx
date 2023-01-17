@@ -1,5 +1,5 @@
 import React from 'react'
-import './index.less'
+// import style from './index.module.less'
 
 interface IProps {
 	label?: string

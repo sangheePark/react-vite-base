@@ -1,8 +1,8 @@
-import { EPath } from '@/enums/common'
-import { useAppStore } from '@/store'
+import { EPath } from '@/enums/commonEnum'
+import useAppStore from '@/store/appStore'
 import { useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
-import style from './index.module.less'
+import style from './Login.module.less'
 
 const Login: React.FC = () => {
 	const navigator = useNavigate()

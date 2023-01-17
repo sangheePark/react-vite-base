@@ -1,10 +1,10 @@
 import NProgress from '@/config/nprogress'
 import axios, { AxiosInstance, AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios'
 import { tryHideFullScreenLoading } from '@/config/serviceLoading'
-import { ResultData } from '@/api/interface'
 import { ResultEnum } from '@/enums/httpEnum'
-import { checkStatus } from './helper/checkStatus'
-import { AxiosCanceler } from './helper/axiosCancel'
+import { checkStatus } from './checkStatus'
+import AxiosCanceler from './axiosCancel'
+import { ResultData } from '@/model/apiModel'
 
 const axiosCanceler = new AxiosCanceler()
 

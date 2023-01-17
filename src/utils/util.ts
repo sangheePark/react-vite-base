@@ -1,4 +1,4 @@
-import { RouteObject } from '@/routers/interface'
+import { IRouteObject } from '@/routers/interface'
 
 /**
  * @description get localStoreage
@@ -47,8 +47,8 @@ export const localClear = () => {
  * @param {Array} routes
  * @returns array
  */
-export const searchRoute = (path: string, routes: RouteObject[] = []): RouteObject => {
-	let result: RouteObject = {}
+export const searchRoute = (path: string, routes: IRouteObject[] = []): IRouteObject => {
+	let result: IRouteObject = {}
 	for (let item of routes) {
 		if (item.path === path) return item
 		if (item.children) {

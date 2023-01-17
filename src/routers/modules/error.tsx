@@ -1,7 +1,7 @@
 import React from 'react'
 import lazyLoad from '@/routers/utils/lazyLoad'
 import { IRouteObject } from '@/routers/interface'
-import { EPath } from '@/enums/common'
+import { EPath } from '@/enums/commonEnum'
 
 const errorRouter: Array<IRouteObject> = [
 	{

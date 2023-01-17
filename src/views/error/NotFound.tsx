@@ -1,5 +1,3 @@
-import './index.less'
-
 const NotFound: React.FC = () => {
 	return <div>404 화면</div>
 }

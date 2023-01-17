@@ -13,7 +13,7 @@ export interface IAppStoreFunction {
 
 const defaultValue: IAppStore = {}
 
-export const useAppStore = create(
+const useAppStore = create(
 	devtools(
 		persist<IAppStore & IAppStoreFunction>(
 			set => ({
@@ -25,8 +25,10 @@ export const useAppStore = create(
 					})),
 				setToken: (token: string) => set(prev => ({ ...prev, token }))
 			}),
-			{ name: 'appStore' }
+			{ name: 'useAppStore' }
 		),
 		{ enabled: false }
 	)
 )
+
+export default useAppStore
