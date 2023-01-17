@@ -2,7 +2,7 @@ import { EPath } from '@/enums/common'
 import { useAppStore } from '@/store'
 import { useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
-import './index.less'
+import style from './index.module.less'
 
 const Login: React.FC = () => {
 	const navigator = useNavigate()
@@ -14,7 +14,7 @@ const Login: React.FC = () => {
 	}, [])
 
 	return (
-		<div className='login-container'>
+		<div className={style.container}>
 			sssssssssssssssssssssssssssssssssssssss ssssssssssssssssssssssssssssssss 로그인 화면
 			<button onClick={doLogin}> home</button>
 		</div>

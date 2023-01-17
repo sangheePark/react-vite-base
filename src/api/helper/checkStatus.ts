@@ -1,3 +1,5 @@
+import { HttpStatusCode } from 'axios'
+
 /**
  * @description:
  * @param {Number} status
@@ -5,25 +7,25 @@
  */
 export const checkStatus = (status: number): void => {
 	switch (status) {
-		case 400:
+		case HttpStatusCode.BadRequest:
 			break
-		case 401:
+		case HttpStatusCode.Unauthorized:
 			break
-		case 403:
+		case HttpStatusCode.Forbidden:
 			break
-		case 404:
+		case HttpStatusCode.NotFound:
 			break
-		case 405:
+		case HttpStatusCode.MethodNotAllowed:
 			break
-		case 408:
+		case HttpStatusCode.RequestTimeout:
 			break
-		case 500:
+		case HttpStatusCode.InternalServerError:
 			break
-		case 502:
+		case HttpStatusCode.BadGateway:
 			break
-		case 503:
+		case HttpStatusCode.ServiceUnavailable:
 			break
-		case 504:
+		case HttpStatusCode.GatewayTimeout:
 			break
 		default:
 	}

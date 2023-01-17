@@ -1,10 +1,12 @@
 1. vite
 
+   - 설정 번역
+     - https://vitejs-kr.github.io/config/shared-options.html
    - plugin
-     - vite-plugin-html: \*.html 에서 환경 변수를 사용할때 사용.
-       - https://velog.io/@oimne/index.html%EC%97%90%EC%84%9C-%ED%99%98%EA%B2%BD%EB%B3%80%EC%88%98-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0-Vite-%ED%99%98%EA%B2%BD
-     - rollup-plugin-visualizer: 모듈 레포트
-       - https://velog.io/@aiden-goo/lodash-%EB%B2%88%EB%93%A4%EC%82%AC%EC%9D%B4%EC%A6%88-%EA%B2%BD%EB%9F%89%ED%99%94-%EA%B7%B8%EB%A6%AC%EA%B3%A0-rollup-plugin-visualizer
+   - vite-plugin-html: \*.html 에서 환경 변수를 사용할때 사용.
+     - https://velog.io/@oimne/index.html%EC%97%90%EC%84%9C-%ED%99%98%EA%B2%BD%EB%B3%80%EC%88%98-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0-Vite-%ED%99%98%EA%B2%BD
+   - rollup-plugin-visualizer: 모듈 레포트
+     - https://velog.io/@aiden-goo/lodash-%EB%B2%88%EB%93%A4%EC%82%AC%EC%9D%B4%EC%A6%88-%EA%B2%BD%EB%9F%89%ED%99%94-%EA%B7%B8%EB%A6%AC%EA%B3%A0-rollup-plugin-visualizer
 
 2. react
 

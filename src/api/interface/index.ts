@@ -20,14 +20,14 @@ export interface ReqPage {
 }
 
 export namespace Login {
-	export interface ReqLoginForm {
+	export interface Request {
 		username: string
 		password: string
 	}
-	export interface ResLogin {
+	export interface Response {
 		access_token: string
 	}
-	export interface ResAuthButtons {
-		[propName: string]: any
+	export interface Auth {
+		[propName: string]: string
 	}
 }
