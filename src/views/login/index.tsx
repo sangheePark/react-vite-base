@@ -1,3 +1,4 @@
+import { EPath } from '@/enums/common'
 import { useAppStore } from '@/store'
 import { useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
@@ -9,7 +10,7 @@ const Login: React.FC = () => {
 
 	const doLogin = useCallback(() => {
 		setToken('abcd')
-		navigator('/home')
+		navigator(EPath.HOME)
 	}, [])
 
 	return (

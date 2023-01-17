@@ -1,6 +1,7 @@
 import { Navigate, RouteObject, useRoutes } from 'react-router-dom'
 import Login from '@/views/login/index'
 import { IRouteObject } from './interface'
+import { EPath } from '@/enums/common'
 
 const metaRouters = import.meta.glob<IRouteObject[]>('./modules/*.tsx', { eager: true, import: 'default' })
 
@@ -8,10 +9,6 @@ export const routerArray: IRouteObject[] = []
 Object.keys(metaRouters).forEach(key => {
 	console.log(`routers is key:`, key)
 
-	// metaRouters[item]().then(modules => {
-	// 	console.log(`metaRouters: `, JSON.stringify(modules))
-	// 	routerArray.push(...modules)
-	// })
 	const modules = metaRouters[key]
 	modules.forEach((router: IRouteObject) => {
 		const list: IRouteObject[] = [router, ...(router?.children || [])].filter(f => f.path)
@@ -22,10 +19,10 @@ Object.keys(metaRouters).forEach(key => {
 export const rootRouter: IRouteObject[] = [
 	{
 		path: '/',
-		element: <Navigate to='/login' />
+		element: <Navigate to={EPath.LOGIN} />
 	},
 	{
-		path: '/login',
+		path: EPath.LOGIN,
 		element: <Login />,
 		meta: {
 			requiresAuth: false,
@@ -36,7 +33,7 @@ export const rootRouter: IRouteObject[] = [
 	...routerArray,
 	{
 		path: '*',
-		element: <Navigate to='/404' />
+		element: <Navigate to={EPath.ERROR404} />
 	}
 ]
 

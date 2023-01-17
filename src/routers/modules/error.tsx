@@ -1,11 +1,12 @@
 import React from 'react'
 import lazyLoad from '@/routers/utils/lazyLoad'
 import { IRouteObject } from '@/routers/interface'
+import { EPath } from '@/enums/common'
 
 const errorRouter: Array<IRouteObject> = [
 	{
-		path: '/403',
-		element: lazyLoad(React.lazy(() => import('@/views/error/403'))),
+		path: EPath.ERROR403,
+		element: lazyLoad(React.lazy(() => import('@/views/error/NotAuth'))),
 		meta: {
 			requiresAuth: true,
 			title: '403 화면',
@@ -13,8 +14,8 @@ const errorRouter: Array<IRouteObject> = [
 		}
 	},
 	{
-		path: '/404',
-		element: lazyLoad(React.lazy(() => import('@/views/error/404'))),
+		path: EPath.ERROR404,
+		element: lazyLoad(React.lazy(() => import('@/views/error/NotFound'))),
 		meta: {
 			requiresAuth: false,
 			title: '404 화면',
@@ -22,21 +23,12 @@ const errorRouter: Array<IRouteObject> = [
 		}
 	},
 	{
-		path: '/500',
-		element: lazyLoad(React.lazy(() => import('@/views/error/500'))),
+		path: EPath.ERROR500,
+		element: lazyLoad(React.lazy(() => import('@/views/error/ServerError'))),
 		meta: {
 			requiresAuth: false,
 			title: '500 화면',
 			key: '500'
-		}
-	},
-	{
-		path: '/505',
-		element: lazyLoad(React.lazy(() => import('@/views/error/505'))),
-		meta: {
-			requiresAuth: true,
-			title: '505 화면',
-			key: '505'
 		}
 	}
 ]

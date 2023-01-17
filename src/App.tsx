@@ -1,4 +1,3 @@
-import React from 'react'
 import ConsoleConfig from '@/config/vconsole'
 import { BrowserRouter } from 'react-router-dom'
 import AuthRouter from './routers/utils/authRouter'
