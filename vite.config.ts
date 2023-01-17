@@ -7,6 +7,7 @@ import { createHtmlPlugin } from 'vite-plugin-html'
 import viteCompression from 'vite-plugin-compression'
 import eslintPlugin from 'vite-plugin-eslint'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
+import autoprefixer from 'autoprefixer'
 
 // @see: https://vitejs.dev/config/
 export default defineConfig((mode: ConfigEnv): UserConfig => {
@@ -23,6 +24,9 @@ export default defineConfig((mode: ConfigEnv): UserConfig => {
 		},
 		// global css
 		css: {
+			postcss: {
+				plugins: [autoprefixer()]
+			},
 			preprocessorOptions: {
 				less: {
 					// modifyVars: {
