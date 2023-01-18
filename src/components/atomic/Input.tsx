@@ -1,14 +1,8 @@
-export interface InputProps extends React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
+export interface IInputProps extends React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
 	//override
-	label: string
 }
 
-const Input: React.FC<React.PropsWithChildren<InputProps>> = ({ children, label, ...props }) => {
-	return (
-		<input {...props}>
-			{children}
-			{label}
-		</input>
-	)
+const Input: React.FC<React.PropsWithChildren<IInputProps>> = ({ children, ...props }) => {
+	return <input {...props}>{children}</input>
 }
 export default Input

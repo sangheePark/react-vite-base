@@ -1,8 +1,14 @@
 import React from 'react'
-import Input, { InputProps } from '../atomic/Input'
+import Input, { IInputProps } from '../atomic/Input'
+import Label, { ILabelProps } from '../atomic/Label'
 
-interface InputNumberProps extends InputProps {}
-const InputNumber: React.FC<InputNumberProps> = () => {
-	return <Input label={'dd'}></Input>
+interface IInputNumberProps extends IInputProps {}
+const InputNumber: React.FC<IInputNumberProps & ILabelProps> = ({ label, ...props }) => {
+	return (
+		<div>
+			<Label label={label}></Label>
+			<Input {...props}></Input>
+		</div>
+	)
 }
 export default InputNumber
