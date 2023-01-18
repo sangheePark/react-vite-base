@@ -97,7 +97,10 @@ module.exports = {
 		breaklineNumber: 100,
 		breaklineChar: '|',
 		skipQuestions: [],
-		issuePrefixs: [{ value: 'closed', name: '완료:  해당 이슈 종료' }],
+		issuePrefixs: [
+			{ value: 'open', name: '열기:  issues 등록.' },
+			{ value: 'closed', name: '완료:  issues 종료.' }
+		],
 		allowCustomIssuePrefix: false,
 		allowEmptyIssuePrefix: true,
 		confirmColorize: true,
