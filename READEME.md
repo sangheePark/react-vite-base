@@ -65,3 +65,13 @@
 
      - class 유틸 함수
      - 공식: https://www.npmjs.com/package/classnames
+
+5. 프로젝트
+
+   - husky: git-hook을 이용한 코딩스타일, 테스트코드, 커밋 규격 정책
+
+     - 공식: https://typicode.github.io/husky/#/?id=automatic-recommended
+     - 예제:
+       - https://cresumerjang.github.io/2022/05/03/eslint-prettier-3/
+       - https://naamukim.tistory.com/18
+       - https://library.gabia.com/contents/8492/
