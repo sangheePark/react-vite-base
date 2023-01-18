@@ -12,7 +12,8 @@
 		"lint:eslint": "eslint --fix --ext .js,.ts,.tsx ./src",
 		"lint:prettier": "prettier --write --loglevel warn \"src/**/*.{js,ts,json,tsx,css,less,scss,html,md}\"",
 		"lint:lint-staged": "lint-staged",
-		"prepare": "husky install"
+		"prepare": "husky install",
+		"commit": "git pull && git add -A && git-cz && git push"
 	},
 	"dependencies": {
 		"axios": "^1.2.2",
@@ -25,6 +26,8 @@
 		"zustand": "^4.3.2"
 	},
 	"devDependencies": {
+		"@commitlint/cli": "^17.4.2",
+		"@commitlint/config-conventional": "^17.4.2",
 		"@types/node": "^18.11.18",
 		"@types/qs": "^6.9.7",
 		"@types/react": "^18.0.26",
@@ -36,6 +39,8 @@
 		"@vitejs/plugin-react-swc": "^3.0.0",
 		"autoprefixer": "^10.4.13",
 		"classnames": "^2.3.2",
+		"commitizen": "^4.2.6",
+		"cz-git": "^1.4.1",
 		"eslint": "^8.32.0",
 		"eslint-config-prettier": "^8.6.0",
 		"eslint-plugin-import": "^2.27.4",
@@ -59,5 +64,10 @@
 	},
 	"browserslist": [
 		"last 2 versions"
-	]
+	],
+	"config": {
+		"commitizen": {
+			"path": "node_modules/cz-git"
+		}
+	}
 }
