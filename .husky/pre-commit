@@ -1,4 +1,5 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
+exec >/dev/console 2>&1;
 npm run lint:lint-staged

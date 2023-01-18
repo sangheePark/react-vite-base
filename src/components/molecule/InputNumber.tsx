@@ -11,4 +11,5 @@ const InputNumber: React.FC<IInputNumberProps & ILabelProps> = ({ label, ...prop
 		</div>
 	)
 }
+
 export default InputNumber
