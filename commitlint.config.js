@@ -12,15 +12,14 @@ module.exports = {
 		'subject-empty': [2, 'never'],
 		'type-empty': [2, 'never'],
 		'subject-case': [0],
-		'type-enum': [2, 'always', ['feat', 'fix', 'docs', 'style', 'refactor', 'perf', 'test', 'build', 'ci', 'chore', 'revert', 'wip', 'workflow', 'types', 'release']]
+		'type-enum': [2, 'always', ['wip', 'feat', 'test', 'fix', 'revert', 'config', 'style', 'refactor', 'perf']]
 	},
 	prompt: {
 		messages: {
-			type: "Select the type of change that you're committing:",
-			scope: 'Denote the SCOPE of this change (optional):',
-			customScope: 'Denote the SCOPE of this change:',
-			subject: 'Write a SHORT, IMPERATIVE tense description of the change:\n',
-			body: 'Provide a LONGER description of the change (optional). Use "|" to break new line:\n',
+			type: '커밋 유형을 선택해주세요.',
+			scope: '변경 영향 범위를 선택해주세요.',
+			subject: '제목을 짧고 명시적으로 입력해주세요.:\n',
+			body: '변경에 대한 자세한 설명을 제공하십시오(선택사항). 줄바꿈 = "|":\n',
 			breaking: 'List any BREAKING CHANGES (optional). Use "|" to break new line:\n',
 			footerPrefixsSelect: 'Select the ISSUES type of changeList by this change (optional):',
 			customFooterPrefixs: 'Input ISSUES prefix:',
@@ -29,80 +28,78 @@ module.exports = {
 		},
 		types: [
 			{
+				value: 'wip',
+				name: 'WIP:     🔨  작업중...',
+				emoji: '🔨'
+			},
+			{
 				value: 'feat',
-				name: 'feat:     🚀  A new feature',
+				name: 'feat:     🚀  새로운 기능 추가',
 				emoji: '🚀'
 			},
 			{
+				value: 'test',
+				name: 'test:     ✅  테스트 코드',
+				emoji: '✅'
+			},
+			{
 				value: 'fix',
-				name: 'fix:      🧩  A bug fix',
+				name: 'fix:      🧩  버그 수정',
 				emoji: '🧩'
 			},
 			{
-				value: 'docs',
-				name: 'docs:     📚  Documentation only changes',
+				value: 'revert',
+				name: 'revert:   ⏪️  이번 버전 되돌리기',
+				emoji: '⏪️'
+			},
+			{
+				value: 'config',
+				name: 'config:     📚  프로젝트 설정',
 				emoji: '📚'
 			},
 			{
 				value: 'style',
-				name: 'style:    🎨  Changes that do not affect the meaning of the code',
+				name: 'style:    🎨  코드 포맷팅, 세미',
 				emoji: '🎨'
 			},
 			{
 				value: 'refactor',
-				name: 'refactor: ♻️   A code change that neither fixes a bug nor adds a feature',
+				name: 'refactor: ♻️  기존 코드에 대한 리펙토링',
 				emoji: '♻️'
 			},
 			{
 				value: 'perf',
-				name: 'perf:     ⚡️  A code change that improves performance',
+				name: 'perf:     ⚡️  성능 이슈 대응',
 				emoji: '⚡️'
-			},
-			{
-				value: 'test',
-				name: 'test:     ✅  Adding missing tests or correcting existing tests',
-				emoji: '✅'
-			},
-			{
-				value: 'build',
-				name: 'build:    📦️   Changes that affect the build system or external dependencies',
-				emoji: '📦️'
-			},
-			{
-				value: 'ci',
-				name: 'ci:       🎡  Changes to our CI configuration files and scripts',
-				emoji: '🎡'
-			},
-			{
-				value: 'chore',
-				name: "chore:    🔨  Other changes that don't modify src or test files",
-				emoji: '🔨'
-			},
-			{
-				value: 'revert',
-				name: 'revert:   ⏪️  Reverts a previous commit',
-				emoji: '⏪️'
 			}
 		],
 		useEmoji: true,
 		themeColorCode: '',
-		scopes: [],
-		allowCustomScopes: true,
+		scopes: [
+			{
+				name: '공통',
+				value: 'common'
+			},
+			{
+				name: '업무',
+				value: 'biz'
+			},
+			{
+				name: '콤포넌트',
+				value: 'component'
+			}
+		],
+		allowCustomScopes: false,
 		allowEmptyScopes: true,
-		customScopesAlign: 'bottom',
-		customScopesAlias: 'custom',
-		emptyScopesAlias: 'empty',
+		emptyScopesAlias: '생략',
 		upperCaseSubject: false,
 		allowBreakingChanges: ['feat', 'fix'],
 		breaklineNumber: 100,
 		breaklineChar: '|',
 		skipQuestions: [],
-		issuePrefixs: [{ value: 'closed', name: 'closed:   ISSUES has been processed' }],
-		customIssuePrefixsAlign: 'top',
-		emptyIssuePrefixsAlias: 'skip',
-		customIssuePrefixsAlias: 'custom',
-		allowCustomIssuePrefixs: true,
-		allowEmptyIssuePrefixs: true,
+		issuePrefixs: [{ value: 'closed', name: '완료:  해당 이슈 종료' }],
+		allowCustomIssuePrefix: false,
+		allowEmptyIssuePrefix: true,
 		confirmColorize: true,
 		maxHeaderLength: Infinity,
 		maxSubjectLength: Infinity,

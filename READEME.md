@@ -75,3 +75,10 @@
        - https://cresumerjang.github.io/2022/05/03/eslint-prettier-3/
        - https://naamukim.tistory.com/18
        - https://library.gabia.com/contents/8492/
+
+   - git
+
+     - commitizen
+       - 소개: https://dev-bomdong.tistory.com/m/35
+     - cz-git
+       - https://cz-git.qbb.sh/zh/guide/
