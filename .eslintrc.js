@@ -21,15 +21,7 @@ module.exports = {
 		}
 	},
 	plugins: ['react', '@typescript-eslint', 'react-hooks', 'prettier'],
-	extends: [
-		'eslint:recommended',
-		'plugin:react/recommended',
-		'plugin:@typescript-eslint/recommended',
-		'plugin:react/jsx-runtime',
-		'plugin:react-hooks/recommended',
-		'prettier',
-		'plugin:prettier/recommended'
-	],
+	extends: ['eslint:recommended', 'plugin:react/recommended', 'plugin:@typescript-eslint/recommended', 'plugin:react/jsx-runtime', 'plugin:react-hooks/recommended', 'prettier', 'plugin:prettier/recommended'],
 	/*
 	 * "off" or 0    ==>  규칙 끄기
 	 * "warn" or 1   ==>  규칙을 경고로 설정(코드 실행에 영향을 주지 않음)
@@ -57,9 +49,11 @@ module.exports = {
 		'@typescript-eslint/ban-ts-comment': 'off', // @ts-<지시문> 주석을 허용하지 않거나 지시문 뒤에 설명이 필요합니다.
 		'@typescript-eslint/no-non-null-assertion': 'off', // 후위 연산자(!)가 포함된 null이 아닌 어설션은 허용되지 않습니다.
 		'@typescript-eslint/explicit-module-boundary-types': 'off', // 내보낸 함수 및 클래스의 공개 클래스 메서드에 대한 명시적 반환 및 매개변수 유형 필요
+		'@typescript-eslint/no-empty-interface': 'off', // 빈 interface를 허용하지 않음
 
 		// react (https://github.com/jsx-eslint/eslint-plugin-react)
 		'react-hooks/rules-of-hooks': 'off',
-		'react-hooks/exhaustive-deps': 'off'
+		'react-hooks/exhaustive-deps': 'off',
+		'react/prop-types': 'off'
 	}
 }

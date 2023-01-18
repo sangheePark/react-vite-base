@@ -14,13 +14,20 @@
 2. react
 
    - 변경점
-     https://medium.com/naver-place-dev/react-18%EC%9D%84-%EC%A4%80%EB%B9%84%ED%95%98%EC%84%B8%EC%9A%94-8603c36ddb25
+
+     - https://medium.com/naver-place-dev/react-18%EC%9D%84-%EC%A4%80%EB%B9%84%ED%95%98%EC%84%B8%EC%9A%94-8603c36ddb25
+
    - react-router
 
      - layout 구성
        - https://velog.io/@chldmswnl/React-router-Outlet-%EC%82%AC%EC%9A%A9%ED%95%98%EC%97%AC-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83-%EA%B5%AC%EC%84%B1%ED%95%98%EA%B8%B0
 
-     <!-- https://github.com/easy-mock/easy-mock -->
+   - component
+
+     - atomic pattern
+       - 참고: https://fe-developers.kakaoent.com/2022/220505-how-page-part-use-atomic-design-system/
+     - compound
+       - 참고: https://kentcdodds.com/blog/compound-components-with-react-hooks
 
 3. 상태 관리
 

@@ -1,7 +1,7 @@
 import { IRouteObject } from '@/routers/interface'
 
 /**
- * @description get localStoreage
+ * @description get localStorage
  * @param {String} key
  * @return string
  */
