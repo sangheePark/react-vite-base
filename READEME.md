@@ -35,6 +35,10 @@
      - chunkLoadError 처리
        - 참고: https://velog.io/@goon126/%EC%B2%AD%ED%81%AC-%EC%97%90%EB%9F%AC
 
+   - 스켈레톤
+
+     - 참고: https://ui.toast.com/weekly-pick/ko_20201110
+
 3. 상태 관리
 
    - zustand
@@ -83,8 +87,13 @@
        - https://library.gabia.com/contents/8492/
 
    - git
+
      - commit 시 npm run commit 사용
      - commitizen
        - 소개: https://dev-bomdong.tistory.com/m/35
      - cz-git
        - https://cz-git.qbb.sh/zh/guide/
+
+   - 프론트 엔드 프레임워크
+
+     - 소개: https://appmaster.io/ko/blog/ingi-issneun-peuronteuendeu-peureimweokeu
