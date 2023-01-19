@@ -71,7 +71,12 @@ export default defineConfig((mode: ConfigEnv): UserConfig => {
 			// * EsLint
 			eslintPlugin(),
 			// * module report
-			viteEnv.VITE_REPORT && visualizer(),
+			viteEnv.VITE_REPORT &&
+				visualizer({
+					filename: './dist/report.html',
+					open: true,
+					brotliSize: true
+				}),
 			// * gzip compress
 			viteEnv.VITE_BUILD_GZIP &&
 				viteCompression({
@@ -92,9 +97,9 @@ export default defineConfig((mode: ConfigEnv): UserConfig => {
 			rollupOptions: {
 				output: {
 					// Static resource classification and packaging
-					chunkFileNames: 'assets/js/[name]-[hash].js',
-					entryFileNames: 'assets/js/[name]-[hash].js',
-					assetFileNames: 'assets/[ext]/[name]-[hash].[ext]'
+					chunkFileNames: 'assets/js/[name].[hash:8].js',
+					entryFileNames: 'assets/js/[name].[hash:8].js',
+					assetFileNames: 'assets/[ext]/[name].[hash:8].[ext]'
 				}
 			}
 		}

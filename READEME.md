@@ -29,6 +29,12 @@
      - compound
        - 참고: https://kentcdodds.com/blog/compound-components-with-react-hooks
 
+   - code split
+
+     - React.lazy로 라우터 화면별로 사용.
+     - chunkLoadError 처리
+       - 참고: https://velog.io/@goon126/%EC%B2%AD%ED%81%AC-%EC%97%90%EB%9F%AC
+
 3. 상태 관리
 
    - zustand
@@ -77,7 +83,7 @@
        - https://library.gabia.com/contents/8492/
 
    - git
-
+     - commit 시 npm run commit 사용
      - commitizen
        - 소개: https://dev-bomdong.tistory.com/m/35
      - cz-git

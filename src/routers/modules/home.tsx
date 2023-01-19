@@ -1,4 +1,3 @@
-import React from 'react'
 import lazyLoad from '@/routers/utils/lazyLoad'
 import { LayoutIndex } from '@/routers/constant'
 import { IRouteObject } from '@/routers/interface'
@@ -10,7 +9,7 @@ const homeRouter: Array<IRouteObject> = [
 		children: [
 			{
 				path: EPath.HOME,
-				element: lazyLoad(React.lazy(() => import('@/views/home/Home'))),
+				element: lazyLoad(() => import('@/views/home/Home')),
 				meta: {
 					requiresAuth: true,
 					title: '홈',
