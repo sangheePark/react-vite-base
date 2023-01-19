@@ -76,15 +76,15 @@ module.exports = {
 		scopes: [
 			{
 				name: '공통',
-				value: 'common'
+				value: '공통'
 			},
 			{
 				name: '업무',
-				value: 'biz'
+				value: '업무'
 			},
 			{
 				name: '콤포넌트',
-				value: 'component'
+				value: '콤포넌트'
 			}
 		],
 		allowCustomScopes: false,
