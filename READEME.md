@@ -13,7 +13,7 @@
 
 2. react
 
-   - 변경점
+   - 18.x version 변경점
 
      - https://medium.com/naver-place-dev/react-18%EC%9D%84-%EC%A4%80%EB%B9%84%ED%95%98%EC%84%B8%EC%9A%94-8603c36ddb25
 
@@ -76,6 +76,18 @@
      - class 유틸 함수
      - 공식: https://www.npmjs.com/package/classnames
 
+   - lodash-es
+
+     - array, collection, date 같은 데이터의 구조를 간편하게 함수형으로 제공해줌
+     - lodash es 모듈 버전
+     - 공식: https://lodash.com/docs/4.17.15
+
+   - days.js
+
+     - moment.js 대신 경량화 된 date 유틸
+     - 공식: https://day.js.org/
+     - 참고: https://blog.hoseung.me/2022-03-13-dayjs-instead-of-momentjs/
+
 5. 프로젝트
 
    - husky: git-hook을 이용한 코딩스타일, 테스트코드, 커밋 규격 정책
@@ -113,3 +125,8 @@
      - i18next-http-backend
 
        - 서버 리소스 사용
+
+   - 성능
+
+     - tree shaking
+       - 참고: https://techblog.wclub.co.kr/posts/0001.tree-shaking/Tree%20Shaking%20%EC%9D%84%20%ED%86%B5%ED%95%9C%20%EB%AA%A8%EB%93%88%20%EC%9A%A9%EB%9F%89%20%EC%B5%9C%EC%A0%81%ED%99%94

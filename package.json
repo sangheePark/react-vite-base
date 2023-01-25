@@ -17,8 +17,10 @@
 	},
 	"dependencies": {
 		"axios": "^1.2.2",
+		"days": "^1.1.1",
 		"i18next": "^22.4.9",
 		"i18next-browser-languagedetector": "^7.0.1",
+		"lodash-es": "^4.17.21",
 		"qs": "^6.11.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
@@ -31,6 +33,7 @@
 	"devDependencies": {
 		"@commitlint/cli": "^17.4.2",
 		"@commitlint/config-conventional": "^17.4.2",
+		"@types/lodash-es": "^4.17.6",
 		"@types/node": "^18.11.18",
 		"@types/qs": "^6.9.7",
 		"@types/react": "^18.0.26",

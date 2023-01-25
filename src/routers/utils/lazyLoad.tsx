@@ -1,3 +1,4 @@
+import Loading from '@/components/atomic/Loading'
 import { localGet, localSet } from '@/utils/util'
 import { ComponentType, lazy, Suspense } from 'react'
 
@@ -16,7 +17,7 @@ const lazyLoad = (
 		const LazyComponent = lazy(componentImport)
 		localSet('pageRefreshed', 'false')
 		return (
-			<Suspense fallback={<div>spin load</div>}>
+			<Suspense fallback={<Loading></Loading>}>
 				<LazyComponent />
 			</Suspense>
 		)

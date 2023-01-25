@@ -1,5 +1,7 @@
 export interface MUser {
 	id: string
+	name: string
+	age?: number
 }
 
 export namespace LoginDTO {
@@ -7,7 +9,7 @@ export namespace LoginDTO {
 		username: string
 		password: string
 	}
-	export interface Response {
+	export interface Response extends Omit<MUser, 'id'> {
 		access_token: string
 	}
 	export interface Auth {
