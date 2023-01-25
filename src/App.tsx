@@ -1,7 +1,8 @@
 import ConsoleConfig from '@/config/vconsole'
 import { BrowserRouter } from 'react-router-dom'
-import AuthRouter from './routers/utils/authRouter'
-import Router from './routers'
+import AuthRouter from '@/routers/utils/authRouter'
+import Router from '@/routers'
+// import './i18n'
 
 const App: React.FC = () => {
 	ConsoleConfig.use()

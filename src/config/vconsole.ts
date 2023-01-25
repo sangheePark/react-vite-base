@@ -4,7 +4,8 @@ class ConsoleConfig {
 	use: () => void
 	constructor() {
 		this.use = () => {
-			import.meta.env.DEV && new VConsole()
+			// 로컬 환경 제외
+			!import.meta.env.VITE_DROP_CONSOLE && new VConsole()
 		}
 	}
 }

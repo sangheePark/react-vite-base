@@ -97,3 +97,19 @@
    - 프론트 엔드 프레임워크
 
      - 소개: https://appmaster.io/ko/blog/ingi-issneun-peuronteuendeu-peureimweokeu
+
+   - 다국어
+
+     - react-i18next
+     - i18next
+
+       - 공식: https://www.i18next.com/overview/configuration-options
+
+     - i18next-browser-languagedetector
+
+       - 언어 감지
+       - 공식: https://github.com/i18next/i18next-browser-languageDetect
+
+     - i18next-http-backend
+
+       - 서버 리소스 사용
