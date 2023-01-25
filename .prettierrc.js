@@ -1,6 +1,6 @@
 // @see: https://prettier.io/
 module.exports = {
-	printWidth: 350,
+	printWidth: 150,
 	tabWidth: 2,
 	useTabs: true,
 	// 끝에 세미콜론 없음(true는 있고 false는 없음)
