@@ -128,5 +128,11 @@
 
    - 성능
 
+     - 번들 사이즈: 빌드 이후 ./dist/report.html 참고
+
      - tree shaking
        - 참고: https://techblog.wclub.co.kr/posts/0001.tree-shaking/Tree%20Shaking%20%EC%9D%84%20%ED%86%B5%ED%95%9C%20%EB%AA%A8%EB%93%88%20%EC%9A%A9%EB%9F%89%20%EC%B5%9C%EC%A0%81%ED%99%94
+
+   - storybook
+
+     - 참고: https://velog.io/@sjyoung428/React%EC%97%90-Storybook-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0feat-vite
