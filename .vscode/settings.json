@@ -1,6 +1,19 @@
 {
 	// 단어 체크 예외 설정
-	"cSpell.words": ["vconsole", "doclock", "esbuild", "zustand", "loglevel", "VITE", "nprogress", "languagedetector", "stylelint", "commitlint", "brotliSize"],
+	"cSpell.words": [
+		"vconsole",
+		"footerPrefixsSelect",
+		"doclock",
+		"esbuild",
+		"zustand",
+		"loglevel",
+		"VITE",
+		"nprogress",
+		"languagedetector",
+		"stylelint",
+		"commitlint",
+		"brotliSize"
+	],
 	// auto bracketPair
 	"editor.bracketPairColorization.enabled": true,
 	// auto tag

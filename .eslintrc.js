@@ -21,7 +21,15 @@ module.exports = {
 		}
 	},
 	plugins: ['react', '@typescript-eslint', 'react-hooks', 'prettier'],
-	extends: ['eslint:recommended', 'plugin:react/recommended', 'plugin:@typescript-eslint/recommended', 'plugin:react/jsx-runtime', 'plugin:react-hooks/recommended', 'prettier', 'plugin:prettier/recommended'],
+	extends: [
+		'eslint:recommended',
+		'plugin:react/recommended',
+		'plugin:@typescript-eslint/recommended',
+		'plugin:react/jsx-runtime',
+		'plugin:react-hooks/recommended',
+		'prettier',
+		'plugin:prettier/recommended'
+	],
 	/*
 	 * "off" or 0    ==>  규칙 끄기
 	 * "warn" or 1   ==>  규칙을 경고로 설정(코드 실행에 영향을 주지 않음)
