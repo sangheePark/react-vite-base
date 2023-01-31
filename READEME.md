@@ -25,15 +25,31 @@
    - component
 
      - atomic pattern
+
        - 참고: https://fe-developers.kakaoent.com/2022/220505-how-page-part-use-atomic-design-system/
+
      - compound
+
        - 참고: https://kentcdodds.com/blog/compound-components-with-react-hooks
+
+     - emotion style component
+
+       - 공식: https://emotion.sh/docs/introduction
+       - 참고: https://www.daleseo.com/emotion/
+       - CSS-in-JS vs CSS-in-CSS: https://www.samsungsds.com/kr/insights/web_component.html
+       - style-component와 비교: https://velog.io/@bepyan/styled-components-%EA%B3%BC-emotion-%EB%8F%84%EB%8C%80%EC%B2%B4-%EC%B0%A8%EC%9D%B4%EA%B0%80-%EB%AD%94%EA%B0%80
 
    - code split
 
      - React.lazy로 라우터 화면별로 사용.
      - chunkLoadError 처리
        - 참고: https://velog.io/@goon126/%EC%B2%AD%ED%81%AC-%EC%97%90%EB%9F%AC
+
+   - error Boundaries
+
+     - 공식: https://reactjs.org/docs/error-boundaries.html
+     - 참고: https://fe-developers.kakaoent.com/2022/221110-error-boundary/
+     - 참고: https://velog.io/@sora2821/React-Error-Boundaries
 
    - 스켈레톤
 

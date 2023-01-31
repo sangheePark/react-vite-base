@@ -1,5 +1,5 @@
 import React from 'react'
-import Input, { IInputProps } from '../atomic/Input'
+import Input, { IInputProps } from '../atomic/Input/Input'
 import Label, { ILabelProps } from '../atomic/Label'
 
 interface IInputNumberProps extends IInputProps {}

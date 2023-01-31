@@ -12,7 +12,9 @@
 		"languagedetector",
 		"stylelint",
 		"commitlint",
-		"brotliSize"
+		"brotliSize",
+		"breakline",
+		"issuePrefixs"
 	],
 	// auto bracketPair
 	"editor.bracketPairColorization.enabled": true,
@@ -23,5 +25,6 @@
 	// formatter prettier 설정
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	// 저장시 format
-	"editor.formatOnSave": true
+	"editor.formatOnSave": true,
+	"auto-rename-tag.activationOnLanguage": ["*"]
 }

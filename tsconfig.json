@@ -7,6 +7,7 @@
 		"skipLibCheck": true,
 		"esModuleInterop": false,
 		"allowSyntheticDefaultImports": true,
+		"jsxImportSource": "@emotion/react",
 		/* Strict Type-Checking Options */
 		"strict": true /* Enable all strict type-checking options. */,
 		"forceConsistentCasingInFileNames": true,

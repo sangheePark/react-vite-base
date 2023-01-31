@@ -14,6 +14,10 @@
 		// explorer theme
 		"pkief.material-icon-theme",
 		// git 렌즈
-		"eamodio.gitlens"
+		"eamodio.gitlens",
+		//emotion 스냅샷
+		"ijs.emotionsnippets",
+		//Tag 자동 수정
+		"formulahendry.auto-rename-tag"
 	]
 }

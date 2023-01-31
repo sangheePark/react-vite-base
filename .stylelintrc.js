@@ -2,7 +2,12 @@
 
 module.exports = {
 	extends: ['stylelint-config-standard', 'stylelint-config-prettier', 'stylelint-config-recess-order'],
-	plugins: ['stylelint-less'],
+	overrides: [
+		{
+			files: ['**/*.tsx'],
+			customSyntax: '@stylelint/postcss-css-in-js'
+		}
+	],
 	rules: {
 		indentation: null, // 들여쓰기 공간 지정
 		'no-descending-specificity': null, // 우선순위가 높은 선택자에 의해 무시되는 우선순위가 낮은 선택자를 허용하지 않음

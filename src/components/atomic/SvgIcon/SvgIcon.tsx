@@ -1,3 +1,5 @@
+import StyleSvgIcon from './SvgIcon.style'
+
 interface IProps {
 	name: string //아이콘 이름 ==> 필수
 	color?: string //아이콘 색상 ==> 선택 사항
@@ -8,9 +10,9 @@ interface IProps {
 const SVGIcon: React.FC<IProps> = ({ name, prefix = 'icon', style = { width: '100px', height: '100px' } }: IProps) => {
 	const symbolId = `#${prefix}-${name}`
 	return (
-		<svg aria-hidden='true' style={style}>
+		<StyleSvgIcon aria-hidden='true' style={style}>
 			<use href={symbolId} />
-		</svg>
+		</StyleSvgIcon>
 	)
 }
 

@@ -20,7 +20,7 @@ module.exports = {
 			jsx: true
 		}
 	},
-	plugins: ['react', '@typescript-eslint', 'react-hooks', 'prettier'],
+	plugins: ['react', '@typescript-eslint', 'react-hooks', 'prettier', '@emotion'],
 	extends: [
 		'eslint:recommended',
 		'plugin:react/recommended',
@@ -83,6 +83,12 @@ module.exports = {
 		// 내보낸 함수 및 클래스의 공개 클래스 메서드에 대한 명시적 반환 및 매개변수 유형 필요
 		'@typescript-eslint/no-empty-interface': 'off',
 		// 빈 interface를 허용하지 않음
+
+		//https://emotion.sh/docs/@emotion/eslint-plugin
+		'@emotion/jsx-import': 'error',
+		// '@emotion/no-vanilla': 'error',
+		// '@emotion/import-from-emotion': 'error',
+		// '@emotion/styled-import': 'error',
 
 		// react (https://github.com/jsx-eslint/eslint-plugin-react)
 		'react-hooks/rules-of-hooks': 'off',

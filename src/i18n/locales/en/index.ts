@@ -1,5 +1,7 @@
-import * as title from './title.json'
+import titleJson from './title.json'
 
 export default {
-	title
+	title: {
+		...titleJson
+	}
 }

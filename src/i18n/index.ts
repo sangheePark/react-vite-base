@@ -3,8 +3,8 @@ import { initReactI18next } from 'react-i18next'
 import detector from 'i18next-browser-languagedetector'
 // import Backend from 'i18next-http-backend'
 
-// import en from './locales/en'
-// import ko from './locales/ko'
+import en from './locales/en'
+import ko from './locales/ko'
 
 i18n
 	// .use(Backend)  //백엔드에서 리소스 가져올시
@@ -14,14 +14,8 @@ i18n
 		{
 			// for all options read: https://www.i18next.com/overview/configuration-options
 			resources: {
-				ko: {
-					홈: '홈',
-					메뉴: '메뉴'
-				},
-				en: {
-					홈: 'Home',
-					메뉴: 'Menu'
-				}
+				ko,
+				en
 			},
 			lng: 'ko', //언어 감지기를 상요하는 경우 옵션 정의 X
 			fallbackLng: 'en',
