@@ -1,4 +1,4 @@
-import Loading from '@/components/atomic/Loading'
+import Loading from '@/components/organism/Loading'
 import { localGet, localSet } from '@/utils/util'
 import { ComponentType, lazy, Suspense } from 'react'
 
@@ -30,13 +30,5 @@ const lazyLoad = (
 		throw error
 	}
 }
-
-// const lazyLoad = (Component: React.LazyExoticComponent<any>): React.ReactNode => {
-// 	return (
-// 		<Suspense fallback={<div>spin load</div>}>
-// 			<Component />
-// 		</Suspense>
-// 	)
-// }
 
 export default lazyLoad
