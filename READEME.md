@@ -152,3 +152,6 @@
    - storybook
 
      - 참고: https://velog.io/@sjyoung428/React%EC%97%90-Storybook-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0feat-vite
+     - extensions:
+       - storybook-helper: https://marketplace.visualstudio.com/items?itemName=riccardoforina.storybook-helper
+         - 만들고자하는 component 파일에서 ctrl+shift+p -> create storybook -> ctrl+shift+s 로 저장
