@@ -4,7 +4,7 @@ module.exports = {
 	extends: ['stylelint-config-standard', 'stylelint-config-prettier', 'stylelint-config-recess-order'],
 	overrides: [
 		{
-			files: ['**/*.tsx'],
+			files: ['**/*.tsx', '**/*.ts'],
 			customSyntax: '@stylelint/postcss-css-in-js'
 		}
 	],
