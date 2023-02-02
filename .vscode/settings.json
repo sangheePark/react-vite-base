@@ -14,7 +14,9 @@
 		"commitlint",
 		"brotliSize",
 		"breakline",
-		"issuePrefixs"
+		"issuePrefixs",
+		"middlewares",
+		"todos"
 	],
 	// auto bracketPair
 	"editor.bracketPairColorization.enabled": true,
@@ -26,5 +28,42 @@
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	// 저장시 format
 	"editor.formatOnSave": true,
-	"auto-rename-tag.activationOnLanguage": ["*"]
+	"auto-rename-tag.activationOnLanguage": ["*"],
+	"mock-server.settings.port": 3001,
+	"mock-server.settings.host": "localhost",
+	"mock-server.settings.base": "",
+	"mock-server.settings.id": "id",
+	"mock-server.settings.dbMode": "fetch",
+	"mock-server.settings.reverse": false,
+	"mock-server.settings.log": false,
+	"mock-server.settings.defaults": {
+		"noGzip": false,
+		"noCors": false,
+		"readOnly": false,
+		"logger": true,
+		"bodyParser": true,
+		"cookieParser": true
+	},
+	"mock-server.settings.paths": {
+		"root": "./",
+		"db": ".mock/db.json",
+		"middlewares": ".mock/middlewares.js",
+		"injectors": ".mock/injectors.json",
+		"rewriters": ".mock/rewriters.json",
+		"static": "public",
+		"snapshots": "snapshots",
+		"environment": "env"
+	},
+	"mock-server.settings.watch": true,
+	"mock-server.settings.watchFiles": [],
+	"mock-server.settings.ignoreFiles": [],
+	"mock-server.settings.duplicates": false,
+	"mock-server.settings.homePage": true,
+	"mock-server.settings.openInside": true,
+	"mock-server.settings.showInfoMsg": true,
+	"mock-server.settings.statusBar": {
+		"show": "true",
+		"position": "Right",
+		"priority": "0"
+	}
 }
