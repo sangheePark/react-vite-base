@@ -1,6 +1,6 @@
+import { ComponentType, lazy, Suspense } from 'react'
 import Loading from '@/components/organism/Loading'
 import { localGet, localSet } from '@/utils/util'
-import { ComponentType, lazy, Suspense } from 'react'
 
 /**
  * @description
@@ -17,7 +17,7 @@ const lazyLoad = (
 		const LazyComponent = lazy(componentImport)
 		localSet('pageRefreshed', 'false')
 		return (
-			<Suspense fallback={<Loading></Loading>}>
+			<Suspense fallback={<Loading />}>
 				<LazyComponent />
 			</Suspense>
 		)

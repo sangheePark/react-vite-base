@@ -30,7 +30,7 @@ const inRange = (scrollTop: number, scrollHeight: number, clientHeight: number) 
 	return (clientHeight >= floorMin && clientHeight <= floorMax) || (clientHeight >= ceilMin && clientHeight <= ceilMax)
 }
 
-const Container = (
+function Container(
 	{
 		onTop,
 		onBottom,
@@ -40,26 +40,25 @@ const Container = (
 		...props
 	}: IProps & Pick<React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>, 'id' | 'className' | 'style'>,
 	ref: React.Ref<ScrollContainerRef>
-) => {
+) {
 	const timerRef = useRef<NodeJS.Timeout>()
 	const containerRef = useRef<HTMLDivElement>(null!)
 	const touchTopCount = useRef<number>(0)
 	const touchBottomCount = useRef<number>(0)
 
+	const handleEndScroll = (e: HTMLDivElement) => {
+		console.log('onEndScroll')
+		onScrollEnd(e)
+	}
 	const debounceScroll = useCallback(async (e: HTMLDivElement) => {
 		timerRef.current && clearTimeout(timerRef.current)
 		timerRef.current = setTimeout(() => handleEndScroll(e), 200)
 	}, [])
 
-	const handleEndScroll = (e: HTMLDivElement) => {
-		console.log('onEndScroll')
-		onScrollEnd(e)
-	}
-
 	const handleOnScroll = useCallback((e: React.UIEvent<HTMLDivElement>) => {
 		const element = e.currentTarget as HTMLDivElement
 
-		console.log(`event:` + e.target)
+		console.log(`event:${e.target}`)
 		// 스크롤 탑 이벤트
 		if (element.scrollTop === 0) {
 			touchTopCount.current++

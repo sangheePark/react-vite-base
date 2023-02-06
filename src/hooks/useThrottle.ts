@@ -9,7 +9,7 @@ import { useEffect, useMemo } from 'react'
 export const useThrottle = (time = 500, trailing = false) => {
 	const fn = useMemo(() => {
 		return throttle(
-			(callBack: () => void, isLoading: boolean = false) => {
+			(callBack: () => void, isLoading = false) => {
 				if (isLoading) {
 					return
 				}

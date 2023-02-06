@@ -7,12 +7,13 @@ import './i18n'
 
 const App: React.FC = () => {
 	ConsoleConfig.use()
+
 	return (
 		// <QueryClientProvider client={queryClient}>
 		<GlobalErrorBoundary>
 			<BrowserRouter>
 				<AuthRouter>
-					<Router></Router>
+					<Router />
 				</AuthRouter>
 			</BrowserRouter>
 		</GlobalErrorBoundary>

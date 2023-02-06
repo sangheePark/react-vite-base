@@ -1,10 +1,9 @@
 import NProgress from '@/config/nprogress'
-import axios, { AxiosInstance, AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios'
 import { tryHideFullScreenLoading } from '@/config/serviceLoading'
 import { ResultEnum } from '@/enums/httpEnum'
-import { checkStatus } from './checkStatus'
+import axios, { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios'
 import AxiosCanceler from './axiosCancel'
-import { ResultData } from '@/model/apiModel'
+import { checkStatus } from './checkStatus'
 
 const axiosCanceler = new AxiosCanceler()
 
@@ -20,12 +19,13 @@ const onRequest = (requestConfig: AxiosRequestConfig): AxiosRequestConfig => {
 	NProgress.start()
 	axiosCanceler.addPending(requestConfig)
 	// config?.headers?.noLoading || showFullScreenLoading()
-	const token: string = ''
+	const token = ''
 	return { ...requestConfig, headers: { 'x-access-token': token } }
 }
 
 class RequestHttp {
 	service: AxiosInstance
+
 	public constructor(config: AxiosRequestConfig) {
 		this.service = axios.create(config)
 		this.service.interceptors.request.use(onRequest, (error: AxiosError) => {
@@ -63,12 +63,15 @@ class RequestHttp {
 	get<T>(url: string, params?: object, _object = {}): Promise<ResultData<T>> {
 		return this.service.get(url, { params, ..._object })
 	}
+
 	post<T>(url: string, params?: object, _object = {}): Promise<ResultData<T>> {
 		return this.service.post(url, params, _object)
 	}
+
 	put<T>(url: string, params?: object, _object = {}): Promise<ResultData<T>> {
 		return this.service.put(url, params, _object)
 	}
+
 	delete<T>(url: string, params?: any, _object = {}): Promise<ResultData<T>> {
 		return this.service.delete(url, { params, ..._object })
 	}

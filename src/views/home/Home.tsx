@@ -1,6 +1,6 @@
-import BasicPage from '@/components/template/BasicPage'
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
+import BasicPage from '@/components/template/BasicPage'
 
 const Home: React.FC = () => {
 	const { t } = useTranslation(['title'])

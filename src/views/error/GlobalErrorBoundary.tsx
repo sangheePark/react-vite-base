@@ -52,7 +52,7 @@ class GlobalErrorBoundary extends React.Component<React.PropsWithChildren> {
 							return { ...state, shouldHandleError: false }
 						})
 					}}
-				></Fallback>
+				/>
 			)
 		}
 

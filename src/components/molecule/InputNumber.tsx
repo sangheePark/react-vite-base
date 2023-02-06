@@ -2,12 +2,12 @@ import React from 'react'
 import Input, { IInputProps } from '../atomic/Input/Input'
 import Label, { ILabelProps } from '../atomic/Label'
 
-interface IInputNumberProps extends IInputProps {}
+type IInputNumberProps = IInputProps
 const InputNumber: React.FC<IInputNumberProps & ILabelProps> = ({ label, ...props }) => {
 	return (
 		<div>
-			<Label label={label}></Label>
-			<Input {...props}></Input>
+			<Label label={label} />
+			<Input {...props} />
 		</div>
 	)
 }

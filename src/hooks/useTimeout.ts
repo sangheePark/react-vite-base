@@ -18,7 +18,7 @@ export const useTimeout = () => {
 
 	const wait = (time?: number) => {
 		return new Promise<void>(resolve => {
-			const timeout = time ? time : random(1, 3) * 500
+			const timeout = time || random(1, 3) * 500
 			timeRef.current && clearTimeout(timeRef.current)
 			const id = setTimeout(() => {
 				resolve()

@@ -2,6 +2,7 @@ import VConsole from 'vconsole'
 
 class ConsoleConfig {
 	use: () => void
+
 	constructor() {
 		this.use = () => {
 			// 로컬 환경 제외

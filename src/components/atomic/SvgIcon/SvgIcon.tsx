@@ -1,8 +1,8 @@
 import StyleSvgIcon from './SvgIcon.style'
 
 interface IProps {
-	name: string //아이콘 이름 ==> 필수
-	color?: string //아이콘 색상 ==> 선택 사항
+	name: string // 아이콘 이름 ==> 필수
+	color?: string // 아이콘 색상 ==> 선택 사항
 	prefix?: string // 아이콘 접두사 ==> 선택 사항(기본 "아이콘")
 	style?: React.CSSProperties // 아이콘 스타일 ==> 선택사항
 }

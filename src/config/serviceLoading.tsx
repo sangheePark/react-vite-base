@@ -1,11 +1,11 @@
-import Loading from '@/components/organism/Loading'
 import ReactDOM from 'react-dom/client'
+import Loading from '@/components/organism/Loading'
 
 let needLoadingRequestCount = 0
 
 export const showFullScreenLoading = () => {
 	if (needLoadingRequestCount === 0) {
-		let dom = document.createElement('div')
+		const dom = document.createElement('div')
 		dom.setAttribute('id', 'loading')
 		document.body.appendChild(dom)
 		ReactDOM.createRoot(dom).render(<Loading />)

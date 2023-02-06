@@ -49,7 +49,7 @@ export const localClear = () => {
  */
 export const searchRoute = (path: string, routes: IRouteObject[] = []): IRouteObject => {
 	let result: IRouteObject = {}
-	for (let item of routes) {
+	for (const item of routes) {
 		if (item.path === path) return item
 		if (item.children) {
 			const res = searchRoute(path, item.children)

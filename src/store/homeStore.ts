@@ -1,6 +1,6 @@
-import { MCard } from '@/model/homeModel'
 import { create } from 'zustand'
 import { devtools, persist } from 'zustand/middleware'
+import { MCard } from '@/model/homeModel'
 
 export interface IHomeStore {
 	cards: MCard[]

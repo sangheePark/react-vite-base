@@ -10,7 +10,7 @@ import useAppStore from '@/store/appStore'
 /**
  * @description 권한 체크
  * */
-const AuthRouter = (props: { children: JSX.Element }) => {
+function AuthRouter(props: { children: JSX.Element }) {
 	const { pathname } = useLocation()
 	const { token } = useAppStore()
 	const route = searchRoute(pathname, rootRouter)
@@ -24,7 +24,7 @@ const AuthRouter = (props: { children: JSX.Element }) => {
 	if (!token) return <Navigate to='/login' replace />
 
 	// * Dynamic Router(동적 라우팅, 백엔드에서 반환된 메뉴 데이터에 따라 생성된 1차원 배열)
-	const dynamicRouter = rootRouter.map(m => m.path) //store.getState().auth.authRouter;
+	const dynamicRouter = rootRouter.map(m => m.path) // store.getState().auth.authRouter;
 	// * Static Router(정적 라우팅, 홈페이지 주소를 구성해야 합니다. 그렇지 않으면 메뉴, 버튼 권한 등과 같은 데이터를 얻기 위해 홈페이지에 들어갈 수 없습니다), 데이터를 얻을 때 로드되며 모든 구성 홈페이지 주소는 양호합니다.
 	const staticRouter = ['/', '/403']
 	const routerList = dynamicRouter.concat(staticRouter)

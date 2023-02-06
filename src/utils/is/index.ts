@@ -1,4 +1,4 @@
-const toString = Object.prototype.toString
+const { toString } = Object.prototype
 
 /**
  * @description: 값이 특정 유형인지 확인
