@@ -156,10 +156,11 @@
        - storybook-helper: https://marketplace.visualstudio.com/items?itemName=riccardoforina.storybook-helper
          - 만들고자하는 component 파일에서 ctrl+shift+p -> create storybook -> ctrl+shift+s 로 저장
 
-   - API Mock
+   - API Mock: vscode extension 사용 권장.
 
      - MSW: 프론트쪽에서 구성 및 실제 프로덕션 빌드에서 제외가 필요함. (JSON 기본으로 )
      - Postman: 서버 개발자와 간단하게 공유 가능
+       - 사용하기 용이하나 무료 라이센스에서는 한계가 있음.
      - vscode extensions :
-       - kiran.mock-api-serve
        - thinker.mock-server
+         - extension 설치 후 vscode 우측 하단 바에서 Mock it 클릭 또는 alt+enter

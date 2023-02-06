@@ -29,11 +29,12 @@
 	// 저장시 format
 	"editor.formatOnSave": true,
 	"auto-rename-tag.activationOnLanguage": ["*"],
+	// mock-server 설정
 	"mock-server.settings.port": 3001,
 	"mock-server.settings.host": "localhost",
 	"mock-server.settings.base": "",
 	"mock-server.settings.id": "id",
-	"mock-server.settings.dbMode": "fetch",
+	"mock-server.settings.dbMode": "multi",
 	"mock-server.settings.reverse": false,
 	"mock-server.settings.log": false,
 	"mock-server.settings.defaults": {

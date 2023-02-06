@@ -22,6 +22,8 @@
 		// storybook helper
 		"riccardoforina.storybook-helper",
 		// AI coding helper
-		"tabnine.tabnine-vscode"
+		"tabnine.tabnine-vscode",
+		// mock server
+		"thinker.mock-server"
 	]
 }
