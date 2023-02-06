@@ -1,5 +1,5 @@
+import Loading from '@/components/organism/Loading'
 import ReactDOM from 'react-dom/client'
-import Loading from '@/components/atomic/Loading'
 
 let needLoadingRequestCount = 0
 

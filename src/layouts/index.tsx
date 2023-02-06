@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { Outlet } from 'react-router-dom'
-import style from './index.module.less'
+import style from './index.module.css'
 
 const Layout = () => {
 	useEffect(() => {}, [])

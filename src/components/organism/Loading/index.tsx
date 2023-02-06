@@ -1,5 +1,5 @@
 import React from 'react'
-import style from './index.module.less'
+import style from './index.module.css'
 
 interface IProps {}
 
@@ -74,36 +74,6 @@ const Loading: React.FC<IProps> = () => {
 					<div className='hex-brick h2'></div>
 					<div className='hex-brick h3'></div>
 				</div>
-				{/* <div className="gel c13 r2">
-		<div className="hex-brick h1"></div>
-		<div className="hex-brick h2"></div>
-		<div className="hex-brick h3"></div>
-	  </div> */}
-				{/* <div className="gel c14 r2">
-		<div className="hex-brick h1"></div>
-		<div className="hex-brick h2"></div>
-		<div className="hex-brick h3"></div>
-	  </div>
-	  <div className="gel c15 r2">
-		<div className="hex-brick h1"></div>
-		<div className="hex-brick h2"></div>
-		<div className="hex-brick h3"></div>
-	  </div>
-	  <div className="gel c16 r2">
-		<div className="hex-brick h1"></div>
-		<div className="hex-brick h2"></div>
-		<div className="hex-brick h3"></div>
-	  </div>
-	  <div className="gel c17 r2">
-		<div className="hex-brick h1"></div>
-		<div className="hex-brick h2"></div>
-		<div className="hex-brick h3"></div>
-	  </div>
-	  <div className="gel c18 r2">
-		<div className="hex-brick h1"></div>
-		<div className="hex-brick h2"></div>
-		<div className="hex-brick h3"></div>
-	  </div> */}
 			</div>
 		</div>
 	)

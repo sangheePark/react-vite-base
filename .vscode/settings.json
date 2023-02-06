@@ -18,16 +18,21 @@
 		"middlewares",
 		"todos"
 	],
-	// auto bracketPair
-	"editor.bracketPairColorization.enabled": true,
-	// auto tag
-	"editor.linkedEditing": true,
 	// explorer tree tab size
 	"workbench.tree.indent": 12,
 	// formatter prettier 설정
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	// 저장시 format
 	"editor.formatOnSave": true,
+	// auto bracketPair
+	"editor.bracketPairColorization.enabled": true,
+	// auto tag
+	"editor.linkedEditing": true,
+	"editor.codeActionsOnSave": {
+		"source.organizeImports": true,
+		"source.fixAll.eslint": true,
+		"source.fixAll": true
+	},
 	"auto-rename-tag.activationOnLanguage": ["*"],
 	// mock-server 설정
 	"mock-server.settings.port": 3001,

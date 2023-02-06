@@ -1,8 +1,8 @@
 import ConsoleConfig from '@/config/vconsole'
-import { BrowserRouter } from 'react-router-dom'
-import AuthRouter from '@/routers/utils/authRouter'
 import Router from '@/routers'
-import GlobalErrorBoundary from './components/atomic/Error/GlobalErrorBoundary'
+import AuthRouter from '@/routers/utils/authRouter'
+import GlobalErrorBoundary from '@/views/error/GlobalErrorBoundary'
+import { BrowserRouter } from 'react-router-dom'
 import './i18n'
 
 const App: React.FC = () => {

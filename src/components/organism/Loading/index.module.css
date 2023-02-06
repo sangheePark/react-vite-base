@@ -25,18 +25,13 @@
 	height: 17px;
 	background: #ffffff;
 	animation-name: fade;
-	animation-name: fade;
 	animation-duration: 2s;
-	animation-duration: 2s;
-	animation-iteration-count: infinite;
 	animation-iteration-count: infinite;
 }
 .h2 {
 	transform: rotate(60deg);
-	transform: rotate(60deg);
 }
 .h3 {
-	transform: rotate(-60deg);
 	transform: rotate(-60deg);
 }
 .gel {
@@ -46,16 +41,12 @@
 	width: 30px;
 	height: 30px;
 	transition: all 0.3s;
-	transition: all 0.3s;
 }
 .center-gel {
 	margin-top: -15px;
 	margin-left: -15px;
 	animation-name: pulse;
-	animation-name: pulse;
 	animation-duration: 2s;
-	animation-duration: 2s;
-	animation-iteration-count: infinite;
 	animation-iteration-count: infinite;
 }
 .c1 {
@@ -136,76 +127,49 @@
 }
 .r1 {
 	animation-name: pulse;
-	animation-name: pulse;
-	animation-duration: 2s;
 	animation-duration: 2s;
 	animation-delay: 0.2s;
-	animation-delay: 0.2s;
-	animation-iteration-count: infinite;
 	animation-iteration-count: infinite;
 }
 .r2 {
 	animation-name: pulse;
-	animation-name: pulse;
-	animation-duration: 2s;
 	animation-duration: 2s;
 	animation-delay: 0.4s;
-	animation-delay: 0.4s;
-	animation-iteration-count: infinite;
 	animation-iteration-count: infinite;
 }
 .r3 {
 	animation-name: pulse;
-	animation-name: pulse;
-	animation-duration: 2s;
 	animation-duration: 2s;
 	animation-delay: 0.6s;
-	animation-delay: 0.6s;
-	animation-iteration-count: infinite;
 	animation-iteration-count: infinite;
 }
 .r1 > .hex-brick {
 	animation-name: fade;
-	animation-name: fade;
-	animation-duration: 2s;
 	animation-duration: 2s;
 	animation-delay: 0.2s;
-	animation-delay: 0.2s;
-	animation-iteration-count: infinite;
 	animation-iteration-count: infinite;
 }
 .r2 > .hex-brick {
 	animation-name: fade;
-	animation-name: fade;
-	animation-duration: 2s;
 	animation-duration: 2s;
 	animation-delay: 0.4s;
-	animation-delay: 0.4s;
-	animation-iteration-count: infinite;
 	animation-iteration-count: infinite;
 }
 .r3 > .hex-brick {
 	animation-name: fade;
-	animation-name: fade;
-	animation-duration: 2s;
 	animation-duration: 2s;
 	animation-delay: 0.6s;
-	animation-delay: 0.6s;
-	animation-iteration-count: infinite;
 	animation-iteration-count: infinite;
 }
 
 @keyframes pulse {
 	0% {
 		transform: scale(1);
-		transform: scale(1);
 	}
 	50% {
 		transform: scale(0.01);
-		transform: scale(0.01);
 	}
 	100% {
-		transform: scale(1);
 		transform: scale(1);
 	}
 }
@@ -225,14 +189,11 @@
 @keyframes pulse {
 	0% {
 		transform: scale(1);
-		transform: scale(1);
 	}
 	50% {
 		transform: scale(0.01);
-		transform: scale(0.01);
 	}
 	100% {
-		transform: scale(1);
 		transform: scale(1);
 	}
 }
