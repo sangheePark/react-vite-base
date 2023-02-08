@@ -36,6 +36,7 @@
 
         - 공식: https://emotion.sh/docs/introduction
         - 참고: https://www.daleseo.com/emotion/
+        - 예제: https://www.howdy-mj.me/css/emotionjs-intro
         - CSS-in-JS vs CSS-in-CSS: https://www.samsungsds.com/kr/insights/web_component.html
         - style-component와 비교: https://velog.io/@bepyan/styled-components-%EA%B3%BC-emotion-%EB%8F%84%EB%8C%80%EC%B2%B4-%EC%B0%A8%EC%9D%B4%EA%B0%80-%EB%AD%94%EA%B0%80
 

@@ -4,19 +4,22 @@ import AuthRouter from '@/routers/utils/authRouter'
 import GlobalErrorBoundary from '@/views/error/GlobalErrorBoundary'
 import { BrowserRouter } from 'react-router-dom'
 import './i18n'
+import GlobalStyleContainer from './styles/GlobalStyleContainer'
 
 const App: React.FC = () => {
 	ConsoleConfig.use()
 
 	return (
 		// <QueryClientProvider client={queryClient}>
-		<GlobalErrorBoundary>
-			<BrowserRouter>
-				<AuthRouter>
-					<Router />
-				</AuthRouter>
-			</BrowserRouter>
-		</GlobalErrorBoundary>
+		<GlobalStyleContainer>
+			<GlobalErrorBoundary>
+				<BrowserRouter>
+					<AuthRouter>
+						<Router />
+					</AuthRouter>
+				</BrowserRouter>
+			</GlobalErrorBoundary>
+		</GlobalStyleContainer>
 		// <ReactQueryDevtools initialIsOpen={false} />
 		// </QueryClientProvider>
 	)
