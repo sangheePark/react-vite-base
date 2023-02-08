@@ -170,6 +170,11 @@
         - thinker.mock-server
           - extension 설치 후 vscode 우측 하단 바에서 Mock it 클릭 또는 alt+enter
 
+    - test
+
+      - cypress
+        - 공식: https://docs.cypress.io/guides/component-testing/react/examples
+
     - snapshot 단축키
 
       - react
