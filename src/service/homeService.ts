@@ -1,4 +1,4 @@
-import http from '@/api'
+import http from '@/config/api'
 import { EAPI } from '@/enums/endpoint'
 import { LoginDTO } from '@/model/loginModel'
 

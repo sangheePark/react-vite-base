@@ -1,6 +1,6 @@
 import NProgress from '@/config/nprogress'
 import { tryHideFullScreenLoading } from '@/config/serviceLoading'
-import { ResultEnum } from '@/enums/httpEnum'
+import { MResult } from '@/model/apiModel'
 import axios, { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios'
 import AxiosCanceler from './axiosCancel'
 import { checkStatus } from './checkStatus'
@@ -34,45 +34,36 @@ class RequestHttp {
 
 		this.service.interceptors.response.use(
 			(response: AxiosResponse) => {
-				const { data, config } = response
+				const { config } = response
 				NProgress.done()
 				axiosCanceler.removePending(config)
 				tryHideFullScreenLoading()
-				if (data.code == ResultEnum.OVERDUE) {
-					// store.dispatch(setToken(""));
-					window.location.hash = '/login'
-					return Promise.reject(data)
-				}
-				if (data.code && data.code !== ResultEnum.SUCCESS) {
-					return Promise.reject(data)
-				}
-				return data
+
+				return response
 			},
 			async (error: AxiosError) => {
 				const { response } = error
 				NProgress.done()
 				tryHideFullScreenLoading()
-				// if (error.message.indexOf("timeout") !== -1) message.error("请求超时，请稍后再试");
-				if (response) checkStatus(response.status)
+				if (response) checkStatus(response)
 				if (!window.navigator.onLine) window.location.hash = '/500'
-				return Promise.reject(error)
 			}
 		)
 	}
 
-	get<T>(url: string, params?: object, _object = {}): Promise<ResultData<T>> {
+	get<T>(url: string, params?: object, _object = {}): Promise<MResult<T>> {
 		return this.service.get(url, { params, ..._object })
 	}
 
-	post<T>(url: string, params?: object, _object = {}): Promise<ResultData<T>> {
+	post<T>(url: string, params?: object, _object = {}): Promise<MResult<T>> {
 		return this.service.post(url, params, _object)
 	}
 
-	put<T>(url: string, params?: object, _object = {}): Promise<ResultData<T>> {
+	put<T>(url: string, params?: object, _object = {}): Promise<MResult<T>> {
 		return this.service.put(url, params, _object)
 	}
 
-	delete<T>(url: string, params?: any, _object = {}): Promise<ResultData<T>> {
+	delete<T>(url: string, params?: any, _object = {}): Promise<MResult<T>> {
 		return this.service.delete(url, { params, ..._object })
 	}
 }

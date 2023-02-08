@@ -7,7 +7,7 @@ interface IProps {
 	style?: React.CSSProperties // 아이콘 스타일 ==> 선택사항
 }
 
-const SVGIcon: React.FC<IProps> = ({ name, prefix = 'icon', style = { width: '100px', height: '100px' } }: IProps) => {
+const SVGIcon: React.FC<IProps> = ({ name, prefix = 'icon', style }: IProps) => {
 	const symbolId = `#${prefix}-${name}`
 	return (
 		<StyleSvgIcon aria-hidden='true' style={style}>

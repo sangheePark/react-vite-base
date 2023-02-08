@@ -16,7 +16,8 @@
 		"breakline",
 		"issuePrefixs",
 		"middlewares",
-		"todos"
+		"todos",
+		"kiran"
 	],
 	// explorer tree tab size
 	"workbench.tree.indent": 12,
