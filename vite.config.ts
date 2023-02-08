@@ -1,13 +1,13 @@
-import { defineConfig, loadEnv, ConfigEnv, UserConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
+import autoprefixer from 'autoprefixer'
 import { resolve } from 'path'
-import { wrapperEnv } from './src/utils/getEnv'
 import { visualizer } from 'rollup-plugin-visualizer'
-import { createHtmlPlugin } from 'vite-plugin-html'
+import { ConfigEnv, defineConfig, loadEnv, UserConfig } from 'vite'
 import viteCompression from 'vite-plugin-compression'
 import eslintPlugin from 'vite-plugin-eslint'
+import { createHtmlPlugin } from 'vite-plugin-html'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
-import autoprefixer from 'autoprefixer'
+import { wrapperEnv } from './src/utils/getEnv'
 
 // @see: https://vitejs.dev/config/
 export default defineConfig((mode: ConfigEnv): UserConfig => {
@@ -86,6 +86,12 @@ export default defineConfig((mode: ConfigEnv): UserConfig => {
 			outDir: 'dist',
 			minify: 'esbuild',
 			rollupOptions: {
+				// entry points
+				input: {
+					'.': resolve(__dirname, './index.html'),
+					test1: resolve(__dirname, './test1/index.html'),
+					test2: resolve(__dirname, './test2/index.html')
+				},
 				output: {
 					// Static resource classification and packaging
 					chunkFileNames: 'assets/js/[name].[hash:8].js',

@@ -11,6 +11,10 @@
       - rollup-plugin-visualizer: 모듈 레포트
         - https://velog.io/@aiden-goo/lodash-%EB%B2%88%EB%93%A4%EC%82%AC%EC%9D%B4%EC%A6%88-%EA%B2%BD%EB%9F%89%ED%99%94-%EA%B7%B8%EB%A6%AC%EA%B3%A0-rollup-plugin-visualizer
 
+    - rollup
+      - 참고: https://vitejs-kr.github.io/guide/build.html#multi-page-app
+        - Multi-Page App 부분 참고.
+
 2.  react
 
     - 18.x version 변경점
