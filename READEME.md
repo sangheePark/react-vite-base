@@ -12,8 +12,14 @@
         - https://velog.io/@aiden-goo/lodash-%EB%B2%88%EB%93%A4%EC%82%AC%EC%9D%B4%EC%A6%88-%EA%B2%BD%EB%9F%89%ED%99%94-%EA%B7%B8%EB%A6%AC%EA%B3%A0-rollup-plugin-visualizer
 
     - rollup
+
       - 참고: https://vitejs-kr.github.io/guide/build.html#multi-page-app
         - Multi-Page App 부분 참고.
+
+    - react-remove-attributes
+
+      - cypress 테스트 attributes "data-cy" 를 빌드 시점에서 삭제시켜줌
+      - 공식: https://www.npmjs.com/package/vite-plugin-react-remove-attributes
 
 2.  react
 
@@ -174,6 +180,8 @@
 
       - cypress
         - 공식: https://docs.cypress.io/guides/component-testing/react/examples
+        - type 정의
+          - 글로벌에 추가 및 @types/jest 설치
 
     - snapshot 단축키
 

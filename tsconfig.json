@@ -9,6 +9,7 @@
 		"allowSyntheticDefaultImports": true,
 		"jsxImportSource": "@emotion/react",
 		/* Strict Type-Checking Options */
+		"types": ["cypress", "node"],
 		"strict": true /* Enable all strict type-checking options. */,
 		"forceConsistentCasingInFileNames": true,
 		"module": "ESNext",
