@@ -1,13 +1,16 @@
-import { useEffect } from 'react'
-import { useTranslation } from 'react-i18next'
 import BasicPage from '@/components/template/BasicPage'
+import { useTranslation } from 'react-i18next'
+import UserCardBox from './component/UserCardBox'
 
 const Home: React.FC = () => {
 	const { t } = useTranslation(['title'])
-	useEffect(() => {
-		// throw new Error(`dddddd`)
-	}, [])
-	return <BasicPage>{t('홈')} 화면</BasicPage>
+
+	return (
+		<BasicPage>
+			{t('홈')} 화면
+			<UserCardBox />
+		</BasicPage>
+	)
 }
 
 export default Home

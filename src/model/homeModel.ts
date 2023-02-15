@@ -1,7 +1,4 @@
-import { ECardType } from '@/enums/homeEnum'
-
-export interface MCard {
+export interface MHome {
 	id: string
 	name: string
-	type: ECardType
 }

@@ -68,7 +68,7 @@ module.exports = {
 		// @ts-ignore 사용 금지
 		'@typescript-eslint/ban-types': 'off',
 		// 특정 유형의 사용 금지
-		// '@typescript-eslint/explicit-function-return-type': 'off',
+		'@typescript-eslint/explicit-function-return-type': 'off',
 		// 숫자, 문자열 또는 부울로 초기화된 변수 또는 매개 변수에는 명시적 유형 선언이 허용되지 않습니다.
 		// '@typescript-eslint/no-var-requires': 'off',
 		// import 문 안에는 require 문이 허용되지 않습니다.
