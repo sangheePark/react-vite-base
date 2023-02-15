@@ -17,7 +17,8 @@
 		"issuePrefixs",
 		"middlewares",
 		"todos",
-		"kiran"
+		"kiran",
+		"tanstack"
 	],
 	// explorer tree tab size
 	"workbench.tree.indent": 12,

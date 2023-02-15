@@ -74,6 +74,9 @@
       - 번역: https://itchallenger.tistory.com/606
 
     - react Query(별도 요구사항이 필요시..)
+      - 공식: https://tanstack.com/query/v5/docs/react/overview
+      - 도입: https://tech.osci.kr/2022/07/13/react-query/
+      - 도입: https://tech.kakao.com/2022/06/13/react-query/
 
 4.  lib
 
@@ -180,6 +183,7 @@
 
       - cypress
         - 공식: https://docs.cypress.io/guides/component-testing/react/examples
+        - 참고: https://gusrb3164.github.io/web/2021/07/13/cypress-react/
         - type 정의
           - 글로벌에 추가 및 @types/jest 설치
 

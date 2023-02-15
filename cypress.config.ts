@@ -5,6 +5,7 @@ export default defineConfig({
 		devServer: {
 			framework: 'react',
 			bundler: 'vite'
-		}
+		},
+		port: 9090
 	}
 })

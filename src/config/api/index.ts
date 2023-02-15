@@ -67,5 +67,5 @@ class RequestHttp {
 		return this.service.delete(url, { params, ..._object })
 	}
 }
-
-export default new RequestHttp(config)
+const http = new RequestHttp(config)
+export default http

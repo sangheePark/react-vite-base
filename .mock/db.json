@@ -57,5 +57,10 @@
 		"description": "middlewares.js 설정된 커스텀 middleware 사용.",
 		"fetch": "http://jsonplaceholder.typicode.com/users",
 		"middlewares": ["DataWrapper"]
+	},
+	"/cards": {
+		"_config": true,
+		"description": "사용자 카드",
+		"fetch": ".mock/data/cards.json"
 	}
 }
