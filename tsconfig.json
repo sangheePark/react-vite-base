@@ -9,7 +9,7 @@
 		"allowSyntheticDefaultImports": true,
 		"jsxImportSource": "@emotion/react",
 		/* Strict Type-Checking Options */
-		"types": ["cypress", "node"],
+		"types": ["cypress", "node", "@emotion/react/types/css-prop"],
 		"strict": true /* Enable all strict type-checking options. */,
 		"forceConsistentCasingInFileNames": true,
 		"module": "ESNext",
@@ -25,5 +25,6 @@
 		}
 	},
 	"include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "vite.config.ts"],
+	// "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "./.storybook", "vite.config.ts"],
 	"exclude": ["node_modules", "dist", "**/*.js"]
 }

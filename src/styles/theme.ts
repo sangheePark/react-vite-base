@@ -6,11 +6,16 @@ export const size = {
 	smallest: '25em' // 400px
 }
 
+const colors = {
+	primary: 'green',
+	secondary: 'orange'
+}
+
 /**
  * @description emotion.d.ts  에 정의 해야함.
  */
 const StyleTheme = {
-	mainColor: '#0000ff',
+	colors,
 	mq: {
 		laptop: `@media only screen and (min-width: ${size.largest})`,
 		tablet: `@media only screen and (min-width: ${size.large})`,

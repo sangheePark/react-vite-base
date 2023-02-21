@@ -37,6 +37,7 @@
       - atomic pattern
 
         - 참고: https://fe-developers.kakaoent.com/2022/220505-how-page-part-use-atomic-design-system/
+        - 참고: https://yozm.wishket.com/magazine/detail/1531/
 
       - compound
 
@@ -84,6 +85,7 @@
 
       - collection 및 observe 코딩
       - 공식: https://rxjs.dev/guide/overview
+      - 참고: https://yozm.wishket.com/magazine/detail/1753/
 
     - vconsole
 
@@ -189,6 +191,8 @@
           - 글로벌에 추가 및 @types/jest 설치
 
     - snapshot 단축키
+
+      - 공식: https://code.visualstudio.com/docs/editor/userdefinedsnippets
 
       - react
         treact: Stateless React Functional Component with no props
