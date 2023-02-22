@@ -195,29 +195,10 @@
       - 공식: https://code.visualstudio.com/docs/editor/userdefinedsnippets
 
       - react
-        treact: Stateless React Functional Component with no props
-        treactprops: Stateless React Functional Component with props (interface)
-        treactprops type: Stateless React Functional Component with props (type)
-        treactstate: React Functional Component with props (interface), in addition to a derived state using useState and useEffect hooks
-        treactstate type: React Functional Component with props (type), in addition to a derived state using useState and useEffect hooks
+        rc: Stateless React Functional Component with no props
         tstate: React useState hook
         teffect: React useEffect hook
-        timport: Import React, useState and useEffect
-        tcontext: React Context with memoized state and Provider component
-        tcontext type: React Context with memoized state and Provider component (type instead of interface)
-        tstyled: Styled Components JSX element
-        tstyledcomp: Styled Components wrapper for components (Material-UI etc.)
 
       - emotion
-        ecss → Declared an emotion css style variable
-        ecn → Creates ClassNames HOC with render props
-        eobjcss → Declared an emotion css style variable with object styles
-        eusthm → Declare them with useTheme() from emotion-theming
-        imecn → Import ClassNames from @emotion/core
-        imecss → Import css from @emotion/core
-        imej → Imports emotion jsx prop
-        imejcss → Imports emotion jsx and css props
         imesc → Import styled from emotion/styled (requires package)
-        imeusthm → Import useTheme from emotion-theming (requires package)
         sc → Declare styled component
-        scw → Declare custom component wrapped in a styled component
