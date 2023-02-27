@@ -14,6 +14,10 @@ declare interface ViteEnv {
 	VITE_REPORT: boolean
 }
 
+interface ImportMeta {
+	readonly env: ViteEnv
+}
+
 // * Dropdown MenuInfo
 declare interface MenuInfo {
 	key: string

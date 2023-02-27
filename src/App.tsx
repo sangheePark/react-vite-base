@@ -6,7 +6,6 @@ import { QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { BrowserRouter } from 'react-router-dom'
 import { queryClient } from './config/reactQuery'
-import './i18n'
 import GlobalStyleContainer from './styles/GlobalStyleContainer'
 
 const App: React.FC = () => {

@@ -5,6 +5,7 @@ export interface StyledTagProps {
 	size?: 'sm' | 'md' | 'lg'
 	color?: 'primary' | 'secondary'
 	isMore?: boolean
+	onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void
 }
 
 const DefaultStyle: CSSProperties = {

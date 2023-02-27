@@ -17,8 +17,7 @@
 			"\t}",
 			")",
 			""
-		],
-		"description": "import emotion styled component"
+		]
 	},
 	"임포트 스타일 컴포넌트 기본{prop}": {
 		"prefix": "iescp",
@@ -26,11 +25,11 @@
 			"import styled from '@emotion/styled'",
 			"import { CSSProperties } from 'react'",
 			"",
-			"export interface Styled${1:${TM_FILENAME/(.*).style.tsx?/${1}/}}Props {}",
+			"export interface IStyled${1:${TM_FILENAME/(.*).style.tsx?/${1}/}}Props {}",
 			"",
 			"const ${2:default}CSS: CSSProperties = {}",
 			"",
-			"export const Styled${1} = styled.${3:div}<Styled${1}Props>(",
+			"export const Styled${1} = styled.${3:div}<IStyled${1}Props>(",
 			"\t{",
 			"\t\t...${2}CSS",
 			"\t},",
@@ -40,8 +39,7 @@
 			"\t}",
 			")",
 			""
-		],
-		"description": ""
+		]
 	},
 	"스타일 컴포넌트 기본": {
 		"prefix": "esc",
@@ -58,8 +56,7 @@
 			"\t}",
 			")",
 			""
-		],
-		"description": ""
+		]
 	},
 	"함수 컴포넌트 기본{prop}": {
 		"prefix": "rcp",
@@ -77,8 +74,7 @@
 			"",
 			"export default ${1};",
 			""
-		],
-		"description": ""
+		]
 	},
 	"함수 컴포넌트 기본": {
 		"prefix": "rc",
@@ -93,31 +89,25 @@
 			"",
 			"export ${1};",
 			""
-		],
-		"description": ""
+		]
 	},
 	"useState hook": {
 		"prefix": "ust",
-		"body": ["const [$1, set${1/(.*)/${1:/capitalize}/}] = useState$0<${2:string}>(${3:''})"],
-		"description": ""
+		"body": ["const [$1, set${1/(.*)/${1:/capitalize}/}] = useState$0<${2:string}>(${3:''})"]
 	},
 	"useEffect hook": {
 		"prefix": "uef",
-		"body": ["useEffect$0(() => {", "\t$1", "}, [$2])"],
-		"description": ""
+		"body": ["useEffect$0(() => {", "\t$1", "}, [$2])"]
 	},
 	"useMemo hook": {
 		"prefix": "ume",
-		"body": ["const ${1} = useMemo$0(() => {", "\treturn ${3:};", "}, [${2:}])"],
-		"description": ""
+		"body": ["const ${1} = useMemo$0(() => {", "\treturn ${3:};", "}, [${2:}])"]
 	},
 	"useCallback hook": {
 		"prefix": "uca",
-		"body": ["const ${1} = useCallback$0((${3:}) => {", "\t${4:}", "}, [${2:}])"],
-		"description": ""
+		"body": ["const ${1} = useCallback$0((${3:}) => {", "\t${4:}", "}, [${2:}])"]
 	},
-	"Storybook CSF": {
-		"scope": "typescript,typescriptreact",
+	"임포트 storybook ": {
 		"prefix": "isb",
 		"body": [
 			"import { ComponentMeta, ComponentStory, ComponentStoryFn } from '@storybook/react';",
@@ -137,5 +127,51 @@
 			"};"
 		],
 		"description": "Scaffold a Basic Story Setup using CSF 2.0 (React TS)"
+	},
+	"storybook Template": {
+		"prefix": "sbt",
+		"body": ["export const ${1} = Template.bind({})", "${1}.args = {", "\t${0}", "}"]
+	},
+	"임포트 zustand": {
+		"prefix": "izu",
+		"body": [
+			"import { create } from 'zustand'",
+			"import { devtools, persist } from 'zustand/middleware'",
+			"",
+			"export interface I${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}}Prop {",
+			"\t${2:value}: ${3:string}${0}",
+			"}",
+			"export interface I${1}Function {",
+			"\tset${2/(.*)/${1:/capitalize}/}: (${2}: ${3:string}) => void",
+			"}",
+			"const defaultValue: I${1}Prop = {",
+			"\t${2}: ''",
+			"}",
+			"const use${1} = create(",
+			"\tdevtools(",
+			"\t\tpersist<I${1}Prop & I${1}Function>(",
+			"\t\t\tset => ({",
+			"\t\t\t\t...defaultValue,",
+			"\t\t\t\tset${2/(.*)/${1:/capitalize}/}: (${2}: ${3:string}) =>",
+			"\t\t\t\t\tset(prev => ({",
+			"\t\t\t\t\t\t...prev,",
+			"\t\t\t\t\t\t${2}",
+			"\t\t\t\t\t}))",
+			"\t\t\t}),",
+			"\t\t\t{ name: 'use${1}' }",
+			"\t\t),",
+			"\t\t{ enabled: import.meta.env.DEV }",
+			"\t)",
+			")",
+			"export default use${1}"
+		]
+	},
+	"onClick type": {
+		"prefix": "onClickType",
+		"body": ["onClick?: (event: React.MouseEvent<${1:HTMLButtonElement}${0}>) => void"]
+	},
+	"onClick handler": {
+		"prefix": "onClick",
+		"body": ["const onClickHandler = useCallback${0}((event: React.MouseEvent<${1:HTMLButtonElement}>) => {", "\t", "}, [${2}])"]
 	}
 }
