@@ -4,10 +4,10 @@ import { StyledTag } from './Tag.style'
 
 export default {
 	title: 'Components/Tag',
-	component: StyledTag
-	// args: {
-	// 	disabled: '' as undefined as any
-	// }
+	component: StyledTag,
+	args: {
+		id: 'string'
+	}
 } as ComponentMeta<typeof StyledTag>
 
 const Template: ComponentStory<typeof StyledTag> = args => <StyledTag {...args}></StyledTag>

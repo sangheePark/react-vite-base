@@ -116,17 +116,16 @@
 		"body": ["const ${1} = useCallback$0((${3:}) => {", "\t${4:}", "}, [${2:}])"],
 		"description": ""
 	},
-	"CSF 2.0: Basic Setup (React TS)": {
+	"Storybook CSF": {
 		"scope": "typescript,typescriptreact",
-		"prefix": "sbr",
+		"prefix": "isb",
 		"body": [
-			"import React from 'react';",
 			"import { ComponentMeta, ComponentStory, ComponentStoryFn } from '@storybook/react';",
 			"",
-			"import { ${1:${TM_FILENAME_BASE/.(?:story|stories).*//gi}} } from './${1:${TM_FILENAME_BASE/.(?:story|stories).*//gi}}';",
+			"import { ${1:${TM_FILENAME_BASE/.(?:story|stories).*//gi}} } from './${1:${TM_FILENAME_BASE/.(?:story|stories).*//gi}}.style';",
 			"",
 			"export default {",
-			"\ttitle: 'Components/${1:${TM_FILENAME_BASE/.(?:story|stories).*//gi}}',",
+			"\ttitle: 'Components/${2:atomic}/${1:${TM_FILENAME_BASE/.(?:story|stories).*//gi}}',",
 			"\tcomponent: ${1:${TM_FILENAME_BASE/.(?:story|stories).*//gi}},",
 			"} as ComponentMeta<typeof ${1:${TM_FILENAME_BASE/.(?:story|stories).*//gi}}>;",
 			"",
@@ -134,7 +133,7 @@
 			"",
 			"export const Default${1:${TM_FILENAME_BASE/.(?:story|stories).*//gi}}: ComponentStoryFn<typeof ${1:${TM_FILENAME_BASE/.(?:story|stories).*//gi}}> = Template.bind({});",
 			"Default${1:${TM_FILENAME_BASE/.(?:story|stories).*//gi}}.args = {",
-			"\t${2}",
+			"\t${3}",
 			"};"
 		],
 		"description": "Scaffold a Basic Story Setup using CSF 2.0 (React TS)"

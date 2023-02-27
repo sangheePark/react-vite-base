@@ -1,15 +1,7 @@
-import { mount } from 'cypress/react18'
-
 // * Vite
 declare type Recordable<T = any> = Record<string, T>
 
-declare global {
-	namespace Cypress {
-		interface Chainable {
-			mount: typeof mount
-		}
-	}
-}
+declare global {}
 
 declare interface ViteEnv {
 	VITE_API_URL: string

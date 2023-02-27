@@ -15,8 +15,6 @@
 		"eamodio.gitlens",
 		//Tag 자동 수정
 		"formulahendry.auto-rename-tag",
-		// storybook helper
-		"riccardoforina.storybook-helper",
 		// AI coding helper
 		"tabnine.tabnine-vscode",
 		// mock server

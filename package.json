@@ -16,7 +16,6 @@
 		"prepare": "husky install",
 		"merge": "git stash && git pull origin master && git stash pop",
 		"commit": "git pull && git add -A && git-cz && git push",
-		"cypress": "cypress open",
 		"storybook": "start-storybook -p 6006",
 		"build-storybook": "build-storybook"
 	},
@@ -55,7 +54,6 @@
 		"@storybook/react": "^6.5.15",
 		"@storybook/testing-library": "^0.0.13",
 		"@stylelint/postcss-css-in-js": "^0.38.0",
-		"@types/jest": "^29.4.0",
 		"@types/lodash-es": "^4.17.6",
 		"@types/node": "^18.11.18",
 		"@types/qs": "^6.9.7",
@@ -70,7 +68,6 @@
 		"babel-loader": "^8.3.0",
 		"classnames": "^2.3.2",
 		"commitizen": "^4.2.6",
-		"cypress": "^12.5.1",
 		"cz-git": "^1.4.1",
 		"eslint": "^8.32.0",
 		"eslint-config-prettier": "^8.6.0",
@@ -96,7 +93,6 @@
 		"vite-plugin-compression": "^0.5.1",
 		"vite-plugin-eslint": "^1.8.1",
 		"vite-plugin-html": "^3.2.0",
-		"vite-plugin-react-remove-attributes": "^1.0.3",
 		"vite-plugin-svg-icons": "^2.0.1"
 	},
 	"browserslist": [

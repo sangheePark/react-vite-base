@@ -169,36 +169,31 @@
 
       - 공식: https://storybook.js.org/tutorials/intro-to-storybook/react/ko/simple-component/
       - 참고: https://velog.io/@sjyoung428/React%EC%97%90-Storybook-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0feat-vite
-      - extensions:
-        - storybook-helper: https://marketplace.visualstudio.com/items?itemName=riccardoforina.storybook-helper
-          - 만들고자하는 component 파일에서 ctrl+shift+p -> create storybook -> ctrl+shift+s 로 저장
 
     - API Mock: vscode extension 사용 권장.
 
-      - MSW: 프론트쪽에서 구성 및 실제 프로덕션 빌드에서 제외가 필요함. (JSON 기본으로 )
       - Postman: 서버 개발자와 간단하게 공유 가능
         - 사용하기 용이하나 무료 라이센스에서는 한계가 있음.
       - vscode extensions :
         - thinker.mock-server
           - extension 설치 후 vscode 우측 하단 바에서 Mock it 클릭 또는 alt+enter
 
-    - test
-
-      - cypress
-        - 공식: https://docs.cypress.io/guides/component-testing/react/examples
-        - 참고: https://gusrb3164.github.io/web/2021/07/13/cypress-react/
-        - type 정의
-          - 글로벌에 추가 및 @types/jest 설치
-
     - snapshot 단축키
 
       - 공식: https://code.visualstudio.com/docs/editor/userdefinedsnippets
 
       - react
-        rc: Stateless React Functional Component with no props
-        tstate: React useState hook
-        teffect: React useEffect hook
+        rc: Functional Component
+        rcp: Functional Component(Props)
+        ust: React useState hook
+        uef: React useEffect hook
+        ume: React useMemo hook
+        uca: React useCallback hook
 
       - emotion
-        imesc → Import styled from emotion/styled (requires package)
-        sc → Declare styled component
+        iesc: Import + emotion component
+        iescp: Import + emotion component(props)
+        esc: emotion component
+
+      - storybook
+        isb: Import + storybook

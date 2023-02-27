@@ -6,7 +6,6 @@ import { ConfigEnv, defineConfig, loadEnv, UserConfig } from 'vite'
 import viteCompression from 'vite-plugin-compression'
 import eslintPlugin from 'vite-plugin-eslint'
 import { createHtmlPlugin } from 'vite-plugin-html'
-import VitePluginReactRemoveAttributes from 'vite-plugin-react-remove-attributes'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import { wrapperEnv } from './src/utils/getEnv'
 
@@ -77,11 +76,7 @@ export default defineConfig((mode: ConfigEnv): UserConfig => {
 					threshold: 10240,
 					algorithm: 'gzip',
 					ext: '.gz'
-				}),
-			// cypress attribute 삭제 플러그인
-			VitePluginReactRemoveAttributes({
-				attributes: ['data-cy']
-			})
+				})
 		],
 		esbuild: {
 			pure: viteEnv.VITE_DROP_CONSOLE ? ['console.log', 'debugger'] : []
