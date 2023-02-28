@@ -38,7 +38,7 @@ export default defineConfig((mode: ConfigEnv): UserConfig => {
 			// mock data 구성
 			proxy: {
 				'/api': {
-					target: 'http://localhost:3001', // easymock
+					target: 'http://localhost:3001',
 					changeOrigin: true,
 					rewrite: path => path.replace(/^\/api/, '')
 				}

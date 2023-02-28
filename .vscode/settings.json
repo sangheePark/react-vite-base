@@ -20,7 +20,8 @@
 		"kiran",
 		"tanstack",
 		"iesc",
-		"iescp"
+		"iescp",
+		"docgen"
 	],
 	// explorer tree tab size
 	"workbench.tree.indent": 12,
