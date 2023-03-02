@@ -1,7 +1,7 @@
 import { EStorybookCategory } from '@/enums/storybookEnum'
-import { ComponentMeta, Story } from '@storybook/react'
+import { ComponentMeta, ComponentStory } from '@storybook/react'
 
-import Button, { IButtonProps } from './Button'
+import Button from './Button'
 
 export default {
 	title: 'Components/atomic/Button',
@@ -59,8 +59,8 @@ export default {
 	}
 } as ComponentMeta<typeof Button>
 
-// const Template: ComponentStory<typeof Button> = args => <Button {...args} />
-const Template: Story<IButtonProps> = args => <Button {...args} />
+const Template: ComponentStory<typeof Button> = args => <Button {...args} />
+// const Template: Story<IButtonProps> = args => <Button {...args} />
 
 export const Default = Template.bind({})
 Default.args = {

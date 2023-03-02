@@ -1,0 +1,18 @@
+[
+	{
+		"id": 1,
+		"type": "MODEL"
+	},
+	{
+		"id": 2,
+		"type": "SERVICE"
+	},
+	{
+		"id": 3,
+		"type": "COMPONENT"
+	},
+	{
+		"id": 4,
+		"type": "PAGE"
+	}
+]

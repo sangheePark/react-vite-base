@@ -181,3 +181,13 @@
 
       - storybook
         isb: Import + storybook
+
+      - model
+        mbn: Model base namespace
+
+      - API PATH
+        abp: API Base Path
+
+      - Service
+        icrud: Import + service method CRUD
+        crud: service method CRUD

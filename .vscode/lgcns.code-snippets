@@ -1,5 +1,5 @@
 {
-	"임포트 스타일 컴포넌트 기본": {
+	"임포트 + 스타일 컴포넌트 기본": {
 		"prefix": "iesc",
 		"body": [
 			"import styled from '@emotion/styled'",
@@ -19,7 +19,7 @@
 			""
 		]
 	},
-	"임포트 스타일 컴포넌트 기본{prop}": {
+	"임포트 + 스타일 컴포넌트 기본{prop}": {
 		"prefix": "iescp",
 		"body": [
 			"import styled from '@emotion/styled'",
@@ -61,7 +61,7 @@
 	"함수 컴포넌트 기본{prop}": {
 		"prefix": "rcp",
 		"body": [
-			"interface I${1:${TM_FILENAME/(.*).tsx?/${1}/}}Props {",
+			"export interface I${1:${TM_FILENAME/(.*).tsx?/${1}/}}Props {",
 			"}",
 			"",
 			"const ${1}: React.FC<React.PropsWithChildren<I${1}Props>> = ({ ${2:children} }) => {",
@@ -112,7 +112,7 @@
 		"body": [
 			"import { ComponentMeta, ComponentStory, ComponentStoryFn } from '@storybook/react';",
 			"",
-			"import { ${1:${TM_FILENAME_BASE/.(?:story|stories).*//gi}} } from './${1:${TM_FILENAME_BASE/.(?:story|stories).*//gi}}.style';",
+			"import ${1:${TM_FILENAME_BASE/.(?:story|stories).*//gi}} from './${1:${TM_FILENAME_BASE/.(?:story|stories).*//gi}}';",
 			"",
 			"export default {",
 			"\ttitle: 'Components/${2:atomic}/${1:${TM_FILENAME_BASE/.(?:story|stories).*//gi}}',",
@@ -173,5 +173,137 @@
 	"onClick handler": {
 		"prefix": "onClick",
 		"body": ["const onClickHandler = useCallback${0}((event: React.MouseEvent<${1:HTMLButtonElement}>) => {", "\t", "}, [${2}])"]
+	},
+	"Model Base namespaces": {
+		"prefix": "mbn",
+		"body": [
+			"/**",
+			" * @description ",
+			" */",
+			"export namespace ${1:${TM_FILENAME_BASE/(.*)/${1:/capitalize}/}} {",
+			"\t/**",
+			"\t * @description base entity",
+			"\t */",
+			"\texport interface Entity {",
+			"\t\tid: string",
+			"\t}",
+			"\t/**",
+			"\t * @description 요청",
+			"\t */",
+			"\texport interface Request {",
+			"\t\t//속성",
+			"\t}",
+			"\t/**",
+			"\t * @description 응답",
+			"\t */",
+			"\texport interface Response extends Entity {",
+			"\t\t//상속, Pick 또는 Omit",
+			"\t}",
+			"\t/**",
+			"\t * @description 조회 조건",
+			"\t */",
+			"\texport interface Filter extends Pick<Entity, 'id'> {",
+			"\t\t//상속, Pick 또는 Omit",
+			"\t}",
+			"}"
+		]
+	},
+	"임포트 + CRUD Service Base": {
+		"prefix": "icrud",
+		"body": [
+			"import http from '@/config/api'",
+			"import { EAPI } from '@/enums/endpoint'",
+			"import { MResult } from '@/model/apiModel'",
+			"import { ${1/(.*)/${1:/capitalize}/}Model } from '@/model/${1:${TM_FILENAME_BASE/Service.*/${1}/}}/${1/(.*)/${1:/camelcase}/}Model'",
+			"/**",
+			" * @description serviceNamespace",
+			" */",
+			"export namespace ${1/(.*)/${1:/capitalize}/}Service {",
+			"\t/**",
+			"\t * @description list",
+			"\t */",
+			"\texport const list = (params: ${1/(.*)/${1:/capitalize}/}Model.Filter): Promise<MResult<${1/(.*)/${1:/capitalize}/}Model.Response[]>> => {",
+			"\t\treturn http.post<${1/(.*)/${1:/capitalize}/}Model.Response[]>(EAPI.${1/(.*)/${1:/upcase}/}.LIST, params)",
+			"\t}",
+			"\t/**",
+			"\t * @description detail",
+			"\t */",
+			"\texport const detail = (params: ${1/(.*)/${1:/capitalize}/}Model.Filter): Promise<MResult<${1/(.*)/${1:/capitalize}/}Model.Response>> => {",
+			"\t\treturn http.get<${1/(.*)/${1:/capitalize}/}Model.Response>(EAPI.${1/(.*)/${1:/upcase}/}.DETAIL + params.id)",
+			"\t}",
+			"\t/**",
+			"\t * @description add",
+			"\t */",
+			"\texport const add = (params: ${1/(.*)/${1:/capitalize}/}Model.Request): Promise<MResult<${1/(.*)/${1:/capitalize}/}Model.Response>> => {",
+			"\t\treturn http.post<${1/(.*)/${1:/capitalize}/}Model.Response>(EAPI.${1/(.*)/${1:/upcase}/}.ADD, params)",
+			"\t}",
+			"\t/**",
+			"\t * @description edit",
+			"\t */",
+			"\texport const edit = (params: ${1/(.*)/${1:/capitalize}/}Model.Request): Promise<MResult<${1/(.*)/${1:/capitalize}/}Model.Response>> => {",
+			"\t\treturn http.post<${1/(.*)/${1:/capitalize}/}Model.Response>(EAPI.${1/(.*)/${1:/upcase}/}.EDIT, params)",
+			"\t}",
+			"\t/**",
+			"\t * @description remove",
+			"\t */",
+			"\texport const remove = (params: ${1/(.*)/${1:/capitalize}/}Model.Request): Promise<MResult<${1/(.*)/${1:/capitalize}/}Model.Response>> => {",
+			"\t\treturn http.post<${1/(.*)/${1:/capitalize}/}Model.Response>(EAPI.${1/(.*)/${1:/upcase}/}.REMOVE, params)",
+			"\t}",
+			"}"
+		]
+	},
+	"CRUD Service Base": {
+		"prefix": "crud",
+		"body": [
+			"/**",
+			" * @description list",
+			" */",
+			"export const list = (params: ${1:Example}Model.Filter): Promise<MResult<${1}Model.Response[]>> => {",
+			"\treturn http.post<${1}Model.Response[]>(EAPI.${1/(.*)/${1:/upcase}/}.LIST, params)",
+			"}",
+			"/**",
+			" * @description detail",
+			" */",
+			"export const detail = (params: ${1}Model.Filter): Promise<MResult<${1}Model.Response>> => {",
+			"\treturn http.get<${1}Model.Response>(EAPI.${1/(.*)/${1:/upcase}/}.DETAIL + params.id)",
+			"}",
+			"/**",
+			" * @description add",
+			" */",
+			"export const add = (params: ${1}Model.Request): Promise<MResult<${1}Model.Response>> => {",
+			"\treturn http.post<${1}Model.Response>(EAPI.${1/(.*)/${1:/upcase}/}.ADD, params)",
+			"}",
+			"/**",
+			" * @description edit",
+			" */",
+			"export const edit = (params: ${1}Model.Request): Promise<MResult<${1}Model.Response>> => {",
+			"\treturn http.post<${1}Model.Response>(EAPI.${1/(.*)/${1:/upcase}/}.EDIT, params)",
+			"}",
+			"/**",
+			" * @description remove",
+			" */",
+			"export const remove = (params: ${1}Model.Request): Promise<MResult<${1}Model.Response>> => {",
+			"\treturn http.post<${1}Model.Response>(EAPI.${1/(.*)/${1:/upcase}/}.REMOVE, params)",
+			"}"
+		]
+	},
+	"API Base Path": {
+		"prefix": "abp",
+		"body": [
+			"/**",
+			" * @description ",
+			" */",
+			"export default {",
+			"\tLIST: '/${1:${TM_FILENAME_BASE/(.*)/${1:/camelcase}/}}'",
+			"\tDETAIL: '/$1/'",
+			"\tADD: '/$1/add'",
+			"\tEDIT: '/$1/edit'",
+			"\tREMOVE: '/$1/remove'",
+			"}"
+		]
+	},
+	"DTO Model": {
+		"prefix": "dto",
+		"body": ["export const ${1} = Template.bind({})", "${1}.args = {", "\t${0}", "}"]
 	}
 }

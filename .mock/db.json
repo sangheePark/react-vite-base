@@ -58,9 +58,9 @@
 		"fetch": "http://jsonplaceholder.typicode.com/users",
 		"middlewares": ["DataWrapper"]
 	},
-	"/cards": {
+	"/example": {
 		"_config": true,
-		"description": "사용자 카드",
-		"fetch": ".mock/data/cards.json"
+		"description": "예제 데이터",
+		"fetch": ".mock/data/example.json"
 	}
 }
