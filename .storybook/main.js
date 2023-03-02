@@ -1,6 +1,6 @@
 const path = require('path')
 // const react = require('@vitejs/plugin-react')
-// const { loadConfigFromFile, mergeConfig } = require('vite')
+const { loadConfigFromFile, mergeConfig } = require('vite')
 
 module.exports = {
 	stories: ['../src/**/*.stories.@(js|jsx|ts|tsx)'],
@@ -50,13 +50,13 @@ module.exports = {
 			...userConfig,
 			// manually specify plugins to avoid conflict
 			plugins: [
-				react({
-					exclude: [/\.stories\.(t|j)sx?$/, /node_modules/],
-					jsxImportSource: '@emotion/react',
-					babel: {
-						plugins: ['@emotion/babel-plugin']
-					}
-				})
+				// react({
+				// 	exclude: [/\.stories\.(t|j)sx?$/, /node_modules/],
+				// 	jsxImportSource: '@emotion/react',
+				// 	babel: {
+				// 		plugins: ['@emotion/babel-plugin']
+				// 	}
+				// })
 			]
 		})
 	}
