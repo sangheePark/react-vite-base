@@ -38,7 +38,7 @@ export default defineConfig((mode: ConfigEnv): UserConfig => {
 			// mock data 구성
 			proxy: {
 				'/api': {
-					target: 'http://localhost:3001',
+					target: 'https://bf7f4e20-042d-4287-abee-7aec0f9fdba1.mock.pstmn.io',
 					changeOrigin: true,
 					rewrite: path => path.replace(/^\/api/, '')
 				}

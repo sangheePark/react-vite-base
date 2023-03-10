@@ -15,8 +15,8 @@ class APIErrorBoundary extends React.Component<React.PropsWithChildren> {
 	}
 
 	static getDerivedStateFromError(error: Error): State {
-		console.log(`error.name:`, error.name)
-		console.log(`error.message:`, error.message)
+		console.log(`APIErrorBoundary.name:`, error.name)
+		console.log(`APIErrorBoundary.message:`, error.message)
 
 		if (!error.name) {
 			return {
@@ -35,25 +35,29 @@ class APIErrorBoundary extends React.Component<React.PropsWithChildren> {
 	render() {
 		// 글로벌 처리시
 		if (this.state.shouldRethrow) {
+			console.log(`APIErrorBoundary.shouldRethrow:`)
 			throw this.state.error
 		}
 
 		// 정상 케이스 일 경우
 		if (!this.state.shouldHandleError) {
+			console.log(`APIErrorBoundary.shouldHandleError:`)
 			return this.props.children
-		}
-
-		if (this.state.error) {
-			return (
-				<Fallback
-					error={this.state.error}
-					onRetry={() => {
-						this.setState(state => {
-							return { ...state, shouldHandleError: false }
-						})
-					}}
-				/>
-			)
+		} else {
+			if (this.state.error) {
+				console.log(`APIErrorBoundary.name:`)
+				return (
+					<Fallback
+						error={this.state.error}
+						resetBoundary={() => {
+							// queryClient.res
+							this.setState(state => {
+								return { ...state, shouldHandleError: false }
+							})
+						}}
+					/>
+				)
+			}
 		}
 
 		//   if(미로그인 에러 코드) {

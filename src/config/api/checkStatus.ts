@@ -1,3 +1,4 @@
+import { APIError } from '@/model/apiModel'
 import { AxiosResponse, HttpStatusCode } from 'axios'
 
 /**
@@ -10,7 +11,8 @@ export const checkStatus = (response: AxiosResponse): void => {
 	switch (status) {
 		case HttpStatusCode.BadRequest:
 			// 사용자 요청 파라메터 오류
-			break
+			console.log(`bad Request`)
+			throw new APIError(response.statusText, APIError.요청불량)
 		case HttpStatusCode.Unauthorized:
 			// 인증 만료
 			break

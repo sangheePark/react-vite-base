@@ -167,8 +167,10 @@
       - 공식: https://code.visualstudio.com/docs/editor/userdefinedsnippets
 
       - react
-        rc: Functional Component
-        rcp: Functional Component(Props)
+        fc: Functional Component
+        fcp: Functional Component(Props)
+        rfc: React.FC Component
+        rfcp: React.FC (Props)
         ust: React useState hook
         uef: React useEffect hook
         ume: React useMemo hook

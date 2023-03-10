@@ -45,6 +45,8 @@ class RequestHttp {
 				const { response } = error
 				NProgress.done()
 				tryHideFullScreenLoading()
+				// throw new Error(response?.statusText)
+				// return Promise.reject(new Error(response?.statusText))
 				if (response) checkStatus(response)
 				if (!window.navigator.onLine) window.location.hash = '/500'
 			}
@@ -67,5 +69,9 @@ class RequestHttp {
 		return this.service.delete(url, { params, ..._object })
 	}
 }
+
 const http = new RequestHttp(config)
+// configure({
+// 	axios: http.service
+// })
 export default http

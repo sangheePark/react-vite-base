@@ -3,11 +3,11 @@ import { IStyledButtonProps, StyledButton } from './Button.style'
 
 export interface IButtonProps extends IStyledButtonProps {
 	// onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void
-	// label: string
+	label: string
 }
 
-const Button: FC<IButtonProps> = props => {
-	return <StyledButton {...props}>버튼</StyledButton>
+const Button: FC<IButtonProps> = ({ label, ...props }) => {
+	return <StyledButton {...props}>{label}</StyledButton>
 }
 
 export default Button

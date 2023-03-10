@@ -1,7 +1,0 @@
-[
-	{
-		"routes": ["/users/:id?"],
-		"override": true,
-		"fetch": ".mock/data/users.json"
-	}
-]

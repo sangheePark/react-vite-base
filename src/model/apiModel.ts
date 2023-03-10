@@ -20,11 +20,12 @@ export interface MResultError {
 import { HttpStatusCode } from 'axios'
 
 export class APIError extends Error {
-	constructor(message: string) {
+	constructor(message: string, status: number) {
 		super(message)
 		this.name = this.constructor.name
+		this.status = status
 	}
-	status?: string
+	status?: number
 	code?: string
 	cause?: Error
 	static readonly 인증만료 = HttpStatusCode.Unauthorized
@@ -32,5 +33,5 @@ export class APIError extends Error {
 	static readonly 타임아웃 = HttpStatusCode.RequestTimeout
 	static readonly 요청불량 = HttpStatusCode.BadRequest
 	static readonly 서버오류 = HttpStatusCode.InternalServerError
-	static readonly 알수없음 = '99999'
+	static readonly 알수없음 = 99999
 }

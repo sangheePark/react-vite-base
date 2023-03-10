@@ -1,13 +1,13 @@
-import { MCard } from '@/model/cardModel'
+import { CardModel } from '@/model/cardModel'
 import { create } from 'zustand'
 import { devtools, persist } from 'zustand/middleware'
 
 export interface IHomeStore {
-	cards: MCard[]
+	cards: CardModel.Entity[]
 }
 
 export interface IHomeStoreFunction {
-	setCards: (cards: MCard[]) => void
+	setCards: (cards: CardModel.Entity[]) => void
 }
 
 const defaultValue: IHomeStore = {
@@ -19,7 +19,7 @@ const useHomStore = create(
 		persist<IHomeStore & IHomeStoreFunction>(
 			set => ({
 				...defaultValue,
-				setCards: (cards: MCard[]) =>
+				setCards: (cards: CardModel.Entity[]) =>
 					set(prev => ({
 						...prev,
 						cards

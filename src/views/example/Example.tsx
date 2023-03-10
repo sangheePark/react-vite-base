@@ -1,32 +1,29 @@
-import Tag from '@/components/atomic/Tag/Tag'
-import { ExampleModel } from '@/model/example/exampleModel'
-import { ExampleService } from '@/service/example/exampleService'
-import useExStore from '@/store/exStore'
-import { useEffect, useMemo, useState } from 'react'
+import ExBasicPage from './component/ExBasicPage'
+
+const menus = [
+	{
+		code: 'reactQuery',
+		label: 'react-query'
+	},
+	{
+		code: 'layer',
+		label: 'Layer Context'
+	},
+	{
+		code: 'native',
+		label: 'Native interface'
+	},
+	{
+		code: 'router',
+		label: 'Router-dom'
+	},
+	{
+		code: 'iframe',
+		label: 'iframe'
+	}
+]
 
 const Example: React.FC = () => {
-	const { value } = useExStore()
-	const [state, setState] = useState<ExampleModel.Response[]>([])
-	const [filter] = useState<ExampleModel.Filter>()
-
-	const hasList = useMemo(() => {
-		return state.length > 0
-	}, [state])
-
-	const load = async () => {
-		const response = await ExampleService.list(filter)
-		setState(response.data || [])
-	}
-	useEffect(() => {
-		load()
-	}, [])
-
-	return (
-		<div>
-			<Tag label='예제1' isMore={true}></Tag>
-			{hasList && state.length + `개`}
-			{value}
-		</div>
-	)
+	return <ExBasicPage title='예제 화면' menus={menus}></ExBasicPage>
 }
 export default Example

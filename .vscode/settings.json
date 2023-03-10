@@ -15,13 +15,13 @@
 		"brotliSize",
 		"breakline",
 		"issuePrefixs",
-		"middlewares",
 		"todos",
 		"kiran",
 		"tanstack",
 		"iesc",
 		"iescp",
-		"docgen"
+		"docgen",
+		"rfcp"
 	],
 	// explorer tree tab size
 	"workbench.tree.indent": 12,
@@ -38,43 +38,5 @@
 		"source.fixAll.eslint": true,
 		"source.fixAll": true
 	},
-	"auto-rename-tag.activationOnLanguage": ["*"],
-	// mock-server 설정
-	"mock-server.settings.port": 3001,
-	"mock-server.settings.host": "localhost",
-	"mock-server.settings.base": "",
-	"mock-server.settings.id": "id",
-	"mock-server.settings.dbMode": "multi",
-	"mock-server.settings.reverse": false,
-	"mock-server.settings.log": false,
-	"mock-server.settings.defaults": {
-		"noGzip": false,
-		"noCors": false,
-		"readOnly": false,
-		"logger": true,
-		"bodyParser": true,
-		"cookieParser": true
-	},
-	"mock-server.settings.paths": {
-		"root": "./",
-		"db": ".mock/db.json",
-		"middlewares": ".mock/middlewares.js",
-		"injectors": ".mock/injectors.json",
-		"rewriters": ".mock/rewriters.json",
-		"static": "public",
-		"snapshots": "snapshots",
-		"environment": "env"
-	},
-	"mock-server.settings.watch": true,
-	"mock-server.settings.watchFiles": [],
-	"mock-server.settings.ignoreFiles": [],
-	"mock-server.settings.duplicates": false,
-	"mock-server.settings.homePage": true,
-	"mock-server.settings.openInside": true,
-	"mock-server.settings.showInfoMsg": true,
-	"mock-server.settings.statusBar": {
-		"show": "true",
-		"position": "Right",
-		"priority": "0"
-	}
+	"auto-rename-tag.activationOnLanguage": ["*"]
 }

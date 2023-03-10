@@ -16,8 +16,6 @@
 		//Tag 자동 수정
 		"formulahendry.auto-rename-tag",
 		// AI coding helper
-		"tabnine.tabnine-vscode",
-		// mock server
-		"thinker.mock-server"
+		"tabnine.tabnine-vscode"
 	]
 }

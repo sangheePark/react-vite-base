@@ -31,8 +31,13 @@ class GlobalErrorBoundary extends React.Component<React.PropsWithChildren> {
 			error
 		}
 	}
+	componentDidCatch() {
+		// 에러 리포팅 서비스에 에러를 기록할 수도 있습니다.
+		console.log(`error:componentDidCatch `)
+	}
 
 	render() {
+		// console.log(`error.message:`)
 		// 글로벌 처리시
 		if (this.state.shouldRethrow) {
 			throw this.state.error
@@ -47,7 +52,7 @@ class GlobalErrorBoundary extends React.Component<React.PropsWithChildren> {
 			return (
 				<Fallback
 					error={this.state.error}
-					onRetry={() => {
+					onBack={() => {
 						this.setState(state => {
 							return { ...state, shouldHandleError: false }
 						})

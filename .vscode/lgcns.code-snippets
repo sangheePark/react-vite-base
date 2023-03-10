@@ -1,5 +1,5 @@
 {
-	"임포트 + 스타일 컴포넌트 기본": {
+	"Import Emotion Style component": {
 		"prefix": "iesc",
 		"body": [
 			"import styled from '@emotion/styled'",
@@ -19,7 +19,7 @@
 			""
 		]
 	},
-	"임포트 + 스타일 컴포넌트 기본{prop}": {
+	"Import Emotion Style component Props": {
 		"prefix": "iescp",
 		"body": [
 			"import styled from '@emotion/styled'",
@@ -41,7 +41,7 @@
 			""
 		]
 	},
-	"스타일 컴포넌트 기본": {
+	"Emotion Style component": {
 		"prefix": "esc",
 		"body": [
 			"const ${2:default}CSS: CSSProperties = {}",
@@ -58,17 +58,14 @@
 			""
 		]
 	},
-	"함수 컴포넌트 기본{prop}": {
-		"prefix": "rcp",
+	"React.FC Props": {
+		"prefix": "rfcp",
 		"body": [
-			"export interface I${1:${TM_FILENAME/(.*).tsx?/${1}/}}Props {",
-			"}",
+			"export interface I${1:${TM_FILENAME/(.*).tsx?/${1}/}}Props {}",
 			"",
 			"const ${1}: React.FC<React.PropsWithChildren<I${1}Props>> = ({ ${2:children} }) => {",
 			"\treturn (",
-			"\t\t<>",
-			"\t\t\t",
-			"\t\t</>",
+			"\t\t<>{children}</>",
 			"\t);",
 			"};",
 			"",
@@ -76,19 +73,42 @@
 			""
 		]
 	},
-	"함수 컴포넌트 기본": {
-		"prefix": "rc",
+	"React.FC": {
+		"prefix": "rfc",
 		"body": [
-			"const ${1:Component}: React.FC${2:<React.PropsWithChildren>} = (${0}) => {",
+			"const ${1:Component}: React.FC${2:<React.PropsWithChildren>} = (${0:{children}}) => {",
 			"\treturn (",
-			"\t\t<>",
-			"\t\t\t",
-			"\t\t</>",
+			"\t\t<>{children}</>",
 			"\t);",
 			"};",
 			"",
 			"export ${1};",
 			""
+		]
+	},
+	"function component Props": {
+		"prefix": "fcp",
+		"body": [
+			"export interface I${1:${TM_FILENAME/(.*).tsx?/${1}/}}Props {}",
+			"",
+			"//use only generic component",
+			"export function ${1}({ ${0:children} }: React.PropsWithChildren<I${1}Props>) {",
+			"\treturn (",
+			"\t\t<>{children}</>",
+			"\t);",
+			"};",
+			""
+		]
+	},
+	"function component": {
+		"prefix": "fc",
+		"body": [
+			"//use only generic component",
+			"export function ${1:Component}(${0:{ children }}: React.PropsWithChildren) {",
+			"\treturn (",
+			"\t\t<>{children}</>",
+			"\t);",
+			"};"
 		]
 	},
 	"useState hook": {
@@ -106,6 +126,10 @@
 	"useCallback hook": {
 		"prefix": "uca",
 		"body": ["const ${1} = useCallback$0((${3:}) => {", "\t${4:}", "}, [${2:}])"]
+	},
+	"useNavigate hook": {
+		"prefix": "una",
+		"body": ["const navigate  = useNavigate$0()"]
 	},
 	"임포트 storybook ": {
 		"prefix": "isb",
@@ -301,9 +325,5 @@
 			"\tREMOVE: '/$1/remove'",
 			"}"
 		]
-	},
-	"DTO Model": {
-		"prefix": "dto",
-		"body": ["export const ${1} = Template.bind({})", "${1}.args = {", "\t${0}", "}"]
 	}
 }
