@@ -34,9 +34,7 @@ const IframeContainer: React.FC<IIframeContainerProps> = ({ src, message, onLoad
 	const load = useCallback(() => {
 		console.log(`onLoad: `)
 		onLoad?.()
-
-		message && ref?.current?.contentWindow?.postMessage(message, src || '*')
-	}, [message])
+	}, [onLoad])
 
 	useEffect(() => {
 		ref.current?.addEventListener('load', load)
@@ -46,7 +44,7 @@ const IframeContainer: React.FC<IIframeContainerProps> = ({ src, message, onLoad
 	}, [])
 
 	useEffect(() => {
-		message && ref?.current?.contentWindow?.postMessage(message, src || '*')
+		message && ref?.current?.contentWindow?.postMessage(message, '*') //|| '*'
 	}, [message])
 
 	return <iframe ref={ref} src={src} {...props} />
