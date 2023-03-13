@@ -8,6 +8,6 @@ export interface IStyledBoxProps
 export const StyledBox = styled.div<IStyledBoxProps>`
 	display: flex;
 	flex: ${props => props.flex};
-	flex-direction: ${props => props.flexdirection};
-	justify-content: ${props => props.justifycontent};
+	flex-direction: ${props => props.flexDirection};
+	justify-content: ${props => props.justifyContent};
 `
