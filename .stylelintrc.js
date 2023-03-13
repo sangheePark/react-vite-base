@@ -14,7 +14,7 @@ module.exports = {
 		'function-url-quotes': 'always', // URL 대해 따옴표를 요구하거나 허용하지 않습니다.
 		'string-quotes': 'double', // 작은따옴표 또는 큰따옴표를 사용할 문자열 지정
 		// 'unit-case': null, // 단위의 대소문자 지정 "lower (모두 소문자)"|"upper (모두 대문자)"
-		'color-hex-case': 'lower', // 16진수 색상의 대소문자를 지정합니다. "lower(모두 소문자)"|"upper(모두 대문자)"
+		// 'color-hex-case': 'lower', // 16진수 색상의 대소문자를 지정합니다. "lower(모두 소문자)"|"upper(모두 대문자)"
 		'color-hex-length': 'long', // 16진수 색상의 약자 또는 확장자를 지정 "short(약칭 16진수)"|"long(확장자 16진수)"
 		'rule-empty-line-before': 'never', // 규칙 앞에 빈 줄을 요구하거나 허용하지 않음 "항상(규칙은 항상 빈 줄 앞에 와야 함)" | "never(규칙 앞에는 빈 줄이 없어야 함)"|"always-multi-line(여러 줄 규칙은 항상 빈 줄)"|"never-multi-line(여러 줄 규칙 앞에 빈 줄이 없어야 합니다.)
 		'font-family-no-missing-generic-family-keyword': null, // 글꼴 패밀리 이름 목록에서 누락된 일반 글꼴 패밀리 키워드 억제
