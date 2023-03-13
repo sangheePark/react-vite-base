@@ -3,6 +3,7 @@ import Button from '@/components/atomic/Button/Button'
 import Input from '@/components/atomic/Input/Input'
 import IframeContainer from '@/components/organism/IframeContainer/IframeContainer'
 import { useCallback, useState } from 'react'
+import ExBasicPage from '../component/ExBasicPage'
 
 export interface IExIframeProps {}
 /**
@@ -33,15 +34,15 @@ const ExIframe: React.FC<IExIframeProps> = () => {
 	}, [text])
 
 	return (
-		<>
-			<Box>
+		<ExBasicPage title='iframe 예제'>
+			<Box flexDirection='row'>
 				<Input value={text} onChange={e => setText(e.target.value)}></Input>
 				<Button label='메세지 보내기' onClick={onClickHandler} />
 			</Box>
 
 			<IframeContainer message={messageData} {...attributes} onReceive={onReceiveMessage} onLoad={onLoad} />
 			<Box>받은 메세지: {receiveMessage}</Box>
-		</>
+		</ExBasicPage>
 	)
 }
 

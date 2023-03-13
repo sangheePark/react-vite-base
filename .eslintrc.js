@@ -89,7 +89,7 @@ module.exports = {
 		'@emotion/jsx-import': 'error',
 		// '@emotion/no-vanilla': 'error',
 		// '@emotion/import-from-emotion': 'error',
-		// '@emotion/styled-import': 'error',
+		'@emotion/styled-import': 'off',
 
 		// react (https://github.com/jsx-eslint/eslint-plugin-react)
 		'react-hooks/rules-of-hooks': 'off',
