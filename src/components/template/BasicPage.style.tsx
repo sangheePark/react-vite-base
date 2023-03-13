@@ -14,7 +14,7 @@ export namespace StyledBasicPage {
 
 	export const Top = styled.div(
 		{
-			height: defaultheight,
+			height: `${defaultHeight}px`,
 			lineHeight: `${defaultHeight}px`,
 			margin: '5px 10px'
 		},

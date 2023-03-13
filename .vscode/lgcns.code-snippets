@@ -119,6 +119,10 @@
 		"prefix": "uef",
 		"body": ["useEffect$0(() => {", "\t$1", "}, [$2])"]
 	},
+	"useRef hook": {
+		"prefix": "ure",
+		"body": ["const ${1} = useRef<${0}>()"]
+	},
 	"useMemo hook": {
 		"prefix": "ume",
 		"body": ["const ${1} = useMemo$0(() => {", "\treturn ${3:};", "}, [${2:}])"]
@@ -325,5 +329,9 @@
 			"\tREMOVE: '/$1/remove'",
 			"}"
 		]
+	},
+	"HTML Attributes": {
+		"prefix": "htmlp",
+		"body": ["React.DetailedHTMLProps<React.HTMLAttributes<${1:HTMLDivElement}>, ${1}>"]
 	}
 }

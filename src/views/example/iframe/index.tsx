@@ -1,42 +1,50 @@
-import { useEffect } from 'react'
-import { IFrameStatus, useIFrameParent } from 'react-iframe-helper'
+import Box from '@/components/atomic/Box/Box'
+import Button from '@/components/atomic/Button/Button'
+import Input from '@/components/atomic/Input/Input'
+import IframeContainer from '@/components/organism/IframeContainer/IframeContainer'
+import { useCallback, useState } from 'react'
 
 export interface IExIframeProps {}
-// const childDomain = 'https://pbojinov.github.io/iframe-communication/iframe.html'
-const childDomain = 'https://codesandbox.io/s/stn39?file=/public/tms-webcore-iframe.html'
-
-// https://codesandbox.io/s/stn39?file=/public/tms-webcore-iframe.html
-// https://abangpa1ace.tistory.com/236
-// https://github.com/lo-tp/react-iframe-helper/blob/main/src/index.ts
-// https://github.com/pbojinov/react-iframe-comm/blob/master/src/IframeComm.js
+/**
+ * iframe 예제(현제는 스트링 type 통신)
+ * @returns
+ */
 const ExIframe: React.FC<IExIframeProps> = () => {
-	const { ref, status, send, onLoad } = useIFrameParent({
-		delay: 50,
-		childDomain, //required
-		listen: () => {
-			console.log(`listen`)
-		}
-	})
+	const attributes = {
+		src: 'https://pbojinov.github.io/iframe-communication/iframe.html',
+		width: '100%',
+		height: '200px'
+	}
 
-	useEffect(() => {
-		console.log(`status:`, status)
-		if (status === IFrameStatus.LOADED) {
-			send('xxxxxxx')
-		}
-	}, [status])
+	// the postMessage data you want to send to your iframe
+	// it will be send after the iframe has loaded
+	const [messageData, setMessageData] = useState<string>('hello iframe')
+	const [text, setText] = useState<string>('')
+	const [receiveMessage, setReceiveMessage] = useState<string>('')
+
+	// parent received a message from iframe
+	const onReceiveMessage = (e: MessageEvent<number>) => {
+		const message = e.data.toString()
+		setReceiveMessage(message)
+	}
+
+	// iframe has loaded
+	const onLoad = () => {}
+
+	const onClickHandler = useCallback(() => {
+		console.log(`text: `, text)
+		setMessageData(text)
+	}, [text])
+
 	return (
 		<>
-			<iframe
-				ref={ref}
-				onLoad={onLoad}
-				title='forms'
-				src={childDomain}
-				style={{
-					width: '100%',
-					height: '400px'
-				}}
-				// allow='geolocation'
-			/>
+			<Box>
+				<Input value={text} onChange={e => setText(e.target.value)}></Input>
+				<Button label='메세지 보내기' onClick={onClickHandler} />
+			</Box>
+
+			<IframeContainer message={messageData} {...attributes} onReceive={onReceiveMessage} onLoad={onLoad} />
+			<Box>받은 메세지: {receiveMessage}</Box>
 		</>
 	)
 }
