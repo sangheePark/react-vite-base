@@ -17,7 +17,7 @@ module.exports = {
 		'unit-case': 'lower', // 단위의 대소문자 지정 "lower (모두 소문자)"|"upper (모두 대문자)"
 		'function-name-case': null, //함수 이름을 소문자 또는 대문자로 지정합니다(Autofixable)(Ⓢ).
 		'selector-type-case': null, //유형 선택기(자동 수정 가능)(Ⓢ)에 대해 소문자 또는 대문자를 지정합니다.
-		'value-keyword-case': null, //키워드 값을 소문자 또는 대문자로 지정합니다(자동 수정 가능)(Ⓢ).
+		// 'value-keyword-case': null, //키워드 값을 소문자 또는 대문자로 지정합니다(자동 수정 가능)(Ⓢ).
 		'color-hex-case': 'lower', // 16진수 색상의 대소문자를 지정합니다. "lower(모두 소문자)"|"upper(모두 대문자)"
 		'color-hex-length': 'long', // 16진수 색상의 약자 또는 확장자를 지정 "short(약칭 16진수)"|"long(확장자 16진수)"
 		'rule-empty-line-before': 'never', // 규칙 앞에 빈 줄을 요구하거나 허용하지 않음 "항상(규칙은 항상 빈 줄 앞에 와야 함)" | "never(규칙 앞에는 빈 줄이 없어야 함)"|"always-multi-line(여러 줄 규칙은 항상 빈 줄)"|"never-multi-line(여러 줄 규칙 앞에 빈 줄이 없어야 합니다.)
