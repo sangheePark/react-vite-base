@@ -45,6 +45,16 @@ const exampleRouter: Array<IRouteObject> = [
 					title: 'iframe 예제 화면',
 					key: 'example.iframe'
 				}
+			},
+			{
+				// router
+				path: 'zustand/*',
+				element: lazyLoad(() => import('@/views/example/zustand')),
+				meta: {
+					requiresAuth: false,
+					title: 'iframe 예제 화면',
+					key: 'example.iframe'
+				}
 			}
 		]
 	}

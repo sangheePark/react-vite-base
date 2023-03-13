@@ -20,6 +20,10 @@ const menus = [
 	{
 		code: 'iframe',
 		label: 'iframe'
+	},
+	{
+		code: 'zustand',
+		label: 'zustand'
 	}
 ]
 

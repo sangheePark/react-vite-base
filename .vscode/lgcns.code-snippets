@@ -86,6 +86,26 @@
 			""
 		]
 	},
+
+	"React.FC Props noneChildren": {
+		"prefix": "rfcpn",
+		"body": [
+			"export interface I${1:${TM_FILENAME/(.*).tsx?/${1}/}}Props {}",
+			"",
+			"const ${1}: React.FC<I${1}Props> = () => {",
+			"\treturn (",
+			"\t\t<></>",
+			"\t);",
+			"};",
+			"",
+			"export default ${1};",
+			""
+		]
+	},
+	"React.FC noneChildren": {
+		"prefix": "rfcn",
+		"body": ["const ${1:Component}: React.FC = () => {", "\treturn (", "\t\t<></>", "\t);", "};", "", "export ${1};", ""]
+	},
 	"function component Props": {
 		"prefix": "fcp",
 		"body": [
