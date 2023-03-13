@@ -15,8 +15,8 @@ module.exports = {
 		'string-quotes': 'double', // 작은따옴표 또는 큰따옴표를 사용할 문자열 지정
 		'property-case': null, // 속성의 소문자 또는 대문자를 지정합니다(자동 수정 가능).
 		'unit-case': 'lower', // 단위의 대소문자 지정 "lower (모두 소문자)"|"upper (모두 대문자)"
-		'function-name-case': null, //함수 이름을 소문자 또는 대문자로 지정합니다(Autofixable)(Ⓢ).
-		'selector-type-case': null, //유형 선택기(자동 수정 가능)(Ⓢ)에 대해 소문자 또는 대문자를 지정합니다.
+		// 'function-name-case': null, //함수 이름을 소문자 또는 대문자로 지정합니다(Autofixable)(Ⓢ).
+		// 'selector-type-case': null, //유형 선택기(자동 수정 가능)(Ⓢ)에 대해 소문자 또는 대문자를 지정합니다.
 		// 'value-keyword-case': null, //키워드 값을 소문자 또는 대문자로 지정합니다(자동 수정 가능)(Ⓢ).
 		'color-hex-case': 'lower', // 16진수 색상의 대소문자를 지정합니다. "lower(모두 소문자)"|"upper(모두 대문자)"
 		'color-hex-length': 'long', // 16진수 색상의 약자 또는 확장자를 지정 "short(약칭 16진수)"|"long(확장자 16진수)"
