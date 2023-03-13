@@ -175,6 +175,7 @@
         uef: React useEffect hook
         ume: React useMemo hook
         uca: React useCallback hook
+        ure: React useRef hook
 
       - emotion
         iesc: Import + emotion component

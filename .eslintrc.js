@@ -86,9 +86,9 @@ module.exports = {
 		// 빈 interface를 허용하지 않음
 
 		//https://emotion.sh/docs/@emotion/eslint-plugin
-		'@emotion/jsx-import': 'error',
-		// '@emotion/no-vanilla': 'error',
-		// '@emotion/import-from-emotion': 'error',
+		'@emotion/jsx-import': 'off',
+		'@emotion/no-vanilla': 'off',
+		'@emotion/import-from-emotion': 'off',
 		'@emotion/styled-import': 'off',
 
 		// react (https://github.com/jsx-eslint/eslint-plugin-react)
