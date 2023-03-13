@@ -16,19 +16,15 @@ const ExIframe: React.FC<IExIframeProps> = () => {
 		height: '200px'
 	}
 
-	// the postMessage data you want to send to your iframe
-	// it will be send after the iframe has loaded
 	const [messageData, setMessageData] = useState<string>('hello iframe')
 	const [text, setText] = useState<string>('')
 	const [receiveMessage, setReceiveMessage] = useState<string>('')
 
-	// parent received a message from iframe
 	const onReceiveMessage = (e: MessageEvent<number>) => {
 		const message = e.data.toString()
 		setReceiveMessage(message)
 	}
 
-	// iframe has loaded
 	const onLoad = () => {}
 
 	const onClickHandler = useCallback(() => {
