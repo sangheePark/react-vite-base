@@ -10,7 +10,7 @@ export namespace StyledUExCard {
 			display: 'flex'
 		},
 		props => ({
-			color: props.haschild ? 'gray' : 'white'
+			color: props.hasChild ? 'gray' : 'white'
 		})
 	)
 	export const List = styled.ul({
@@ -23,7 +23,7 @@ export namespace StyledUExCard {
 		height: 40px;
 		font-size: 25px;
 		color: white;
-		background: ${props => (props.testprops ? 'blue' : 'red')};
+		background: ${props => (props.testProps ? 'blue' : 'red')};
 	`
 }
 
